@@ -21,11 +21,13 @@ last modified datetime = 2007-1-9 14:27
 [公共信息]
 关键字=COMMON
 显示方式=1
-数目=4
+数目=6
 项目1=DEBUG, 调试状态, ENUM,0(0:不启用,1:启用), 0,1
 项目2=SET_CLOCK, 是否需要对时, ENUM,0(0:不,1:是), 0,1
 项目3=PREPARE_TIME, 数据准备时间（秒）, WORD,90(0,65535), 0,1
 项目4=LOCK_DIG_ID, 遥控闭锁遥信点ID(五字节内部ID), STRING,0H(0,500), 255,1
+项目5=TSSM_SNTP_MODE, TSSM时钟测量模式, ENUM,0(0:不启动时钟测量,1:TSSM时钟测量端,2:TSSM时钟被测端), 0,1
+项目6=TSSM_SNTP_LOCAL_IF, TSSM网卡名, STRING,motfcc(0,16), 0,1
 [规约信息]
 关键字=s2000
 显示方式=1
