@@ -1,0 +1,32 @@
+[base]
+code = ascii
+name = mgr
+doc version = V1.20
+tool = 1326 config tool
+tool version = V1.10bata
+last modified datetime = 2007-1-9 14:27
+
+[参数信息]
+关键字=MANAGER
+显示方式=1
+数目=9
+项目1=SETTIME_SWITCH_ENABLE, 对时切换使能, BOOL,0, 0,1
+项目2=MASTER_LOCK_ENABLE, 主站间遥控闭锁功能使能, BOOL,0, 0,1
+项目3=PRIMARY_ENABLE, 主机使能, BOOL,0, 0,1
+项目4=SWITCH_TIMEOUT, 双机之间切换的超时时间(分钟), BYTE,1(1,2), 0,1
+项目5=WORKSTATE_ENABLE, 工作状态注册使能, BOOL,0, 0,1
+项目6=RTU_HEARTBEAT_TIMEOUT, RTU对时心跳超时(分钟), BYTE,10(1,100), 0,1
+项目7=GPS_HEARTBEAT_TIMEOUT, GPS对时心跳超时(分钟), BYTE,15(1,100), 0,1
+项目8=MASTER_ID, 主站的ID, BYTE,8(1,255), 0,1
+项目9=MASTER_NAME, 主站名称, STRING,MASTER(0,15), 0,1
+[遥控闭锁点配置信息]
+关键字=MGRYK
+显示方式=2
+数目=7
+项目1=CPU, CPU, BYTE,1(1,255), 0,1
+项目2=PTO, PTO, BYTE,1(1,255), 0,1
+项目3=DEV, DEV, BYTE,1(1,255), 0,1
+项目4=GROUP, GROUP, BYTE,1(1,255), 0,1
+项目5=ENTRY, ENTRY, BYTE,1(1,255), 0,1
+项目6=SFADDR, SFADDR, BYTE,1(1,255), 0,1
+项目7=OBJ, OBJ, BYTE,1(1,255), 0,1

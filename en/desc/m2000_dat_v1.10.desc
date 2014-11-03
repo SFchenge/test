@@ -1,0 +1,225 @@
+[base]
+code = ascii
+name = CSC2000接入规约
+doc version = V1.20
+tool = 1326 config tool
+tool version = V1.10bata
+last modified datetime = 2007-1-9 14:27
+
+[DIG information]
+Key=DIG
+ShowMode=2
+Sum=6
+Item1=内部组号, Group, BYTE,16(0,255), 0,0
+Item2=内部条目号, Entry, BYTE,0(0,255), 0,0
+Item3=控点名, m2000 ctrl name, STRING,(0,15), 0,0
+Item4=遥信点属性, Virtual soe and repair flag, CTRL_WORD,0(0.Virtual SOE.0|No/1|Yes,2.Asymmetry SOE.0|No/1|Yes-need config asymmetry soe,7.Two-position point.0|No/1|Yes,1.Reserve1.0|No/1|Yes,3.Reserve3.0|No/1|Yes,4.Reserve4.0|No/1|Yes,5.Reserve5.0|No/1|Yes,6.Reserve6.0|No/1|Yes), 0,0
+Item5=YxType, Yx type, ENUM,0(0:Switch,1:Protect event,2:Soft,3:hard,4:Alarm,5:Communication status,6:Self-check info,7:Start signal,8:Out signal,9:Reclose signal,10:Revert signal), 0,0
+Item6=描述, Desc, STRING,(0,50), 0,0
+[Event information]
+Key=EVENT
+ShowMode=2
+Sum=8
+Item1=内部组号, Group, BYTE,176(0,255), 0,0
+Item2=内部条目号, Entry, BYTE,0(0,255), 0,0
+Item3=27/28/37/38类型, Event/alarm type, ENUM,27(27:27,28:28,37:37,38:38), 0,0
+Item4=保护类型, 2000 protect type, BYTE,0(0,255), 0,0
+Item5=事件编码, Event code, BYTE,0(0,255), 0,0
+Item6=组号, Related group, BYTE,0(0,255), 0,0
+Item7=条目号, Related item, BYTE,0(0,255), 0,0
+Item8=描述, Desc, STRING,Undefine(0,50), 0,0
+[ANA information]
+Key=ANA
+ShowMode=2
+Sum=9
+Item1=内部组号, Group, BYTE,64(0,255), 0,0
+Item2=内部条目号, Entry, BYTE,0(0,255), 0,0
+Item3=Ratio1, Ration, REAL,1(0,100), 0,0
+Item4=死区1, Dead zone, REAL,0.001(0,100), 0,0
+Item5=控点名, 2000 protocol ctrl name, STRING,0(0,15), 0,0
+Item6=Min, Min, REAL,0(0,100), 0,0
+Item7=Max, Max, REAL,65535(0,65535), 0,0
+Item8=Unit, Unit, STRING,V(0,5), 0,0
+Item9=描述, Desc, STRING,Undefine(0,50), 0,0
+[CTRL information]
+Key=CTRL
+ShowMode=2
+Sum=5
+Item1=内部组号, Group, BYTE,128(0,255), 0,0
+Item2=内部条目号, Entry, BYTE,0(0,255), 0,0
+Item3=控点名, 2000 protocol ctrl name, STRING,0(0,15), 0,0
+Item4=控点名, 2000 protocol ctrl name(Stalls rise), STRING,0(0,15), 0,0
+Item5=描述, Desc, STRING,Undefine(0,50), 0,0
+[Ctrl relate Dig]
+Key=RELA_DIG_CTRL
+ShowMode=2
+Sum=5
+Item1=GROUP, Group, BYTE,128(0,255), 0,0
+Item2=ENTRY, Entry, BYTE,0(0,255), 0,0
+Item3=YX_GROUP, DIG group, BYTE,16(0,255), 0,0
+Item4=YX_ENTRY, DIG entry, BYTE,1(0,255), 0,0
+Item5=描述, CTRL desc, STRING,Undefine(0,50), 0,0
+[Set information]
+Key=SET
+ShowMode=2
+Sum=4
+Item1=内部组号, Group, BYTE,144(0,255), 0,0
+Item2=内部条目号, Entry, BYTE,0(0,255), 0,0
+Item3=Cpu号, Cpu号, BYTE,0(0,8), 0,0
+Item4=当前或指定的定值区号(Hex), Current or specified setpoint Code (H), BYTE_HEX,0(0,ff), 0,0
+[Set zone information]
+Key=ZONE
+ShowMode=2
+Sum=4
+Item1=内部组号, Group, BYTE,208(0,255), 0,0
+Item2=内部条目号, Entry, BYTE,0(0,255), 0,0
+Item3=Cpu号, Cpu num, BYTE,0(0,8), 0,0
+Item4=扩展信息, Telemetry control named or given value items, STRING,ANA3102(0,10), 0,0
+[Set element]
+Key=SET_ELEMENT
+ShowMode=2
+Sum=12
+Item1=GROUP, GROUP, BYTE,144(0,255), 0,0
+Item2=CPU, CPU, BYTE,1(0,255), 0,0
+Item3=ZONE, ZONE, BYTE,16(0,255), 0,0
+Item4=NO, NO, BYTE,1(0,255), 0,0
+Item5=TYPE, Type, ENUM,1(0:float,1:Int,2:Control word type,3:Desc), 0,0
+Item6=MIN/KGBits, MIN/KGBits, REAL,0(0,100), 0,0
+Item7=MAX, MAX(Invalid control word), REAL,0(0,65535), 0,0
+Item8=STEP, Step(Invalid control word), REAL,0(0,100), 0,0
+Item9=精度n, Accuracy n(Invalid control word), REAL,0(0,100), 0,0
+Item10=精度m, Accuracy m(Invalid control word), REAL,0(0,100), 0,0
+Item11=UNIT, Unit(Invalid control word), STRING,0(0,5), 0,0
+Item12=描述, Desc, STRING,Undefine(0,50), 0,0
+[Device's typical information]
+Key=COMMON
+ShowMode=1
+Sum=5
+Item1=SET_TYPE, Set message type, ENUM,2(1:3316 message,2:331A message,3:3380 message,4:35 message), 0,0
+Item2=OSC_TYPE, Record type, ENUM,2(0:No record,1:CST/L/I old Protection,2:CSC_High-voltage protection,3:CSC_10kV protection,4:555657 record), 0,0
+Item3=OSC_EN_TYPE, Call record wave recorded wave enable plug, BYTE,0(0,255), 0,0
+Item4=ZONE_TYPE, zone type, ENUM,0(0:From ID of setting（Generic）,1:From analog（Low Voltage Protection）,2:From the item of a setting value（manager mode）), 0,0
+Item5=ENABLE_EVT_ANA, Event processing enable, BOOL,1, 0,0
+[Record analog information]
+Key=ACC
+ShowMode=2
+Sum=10
+Item1=AccNo, Chl no, BYTE,1(0,255), 0,0
+Item2=识别符/名称, Flag/Name, STRING,0(0,50), 0,0
+Item3=相位特征, Channel phase characteristics, STRING,0(0,50), 0,0
+Item4=通道单位, Channel Unit, STRING,0(0,2), 0,0
+Item5=被监视的回路元件, Circuit elements to be monitored, STRING,0(0,2), 0,0
+Item6=通道乘数, Channel multiplier, REAL,0(0,100), 0,0
+Item7=通道偏移加数, Channel offset addend, REAL,0(0,100), 0,0
+Item8=通道时滞, Channel Delays, REAL,0(0,100), 0,0
+Item9=一次系数, Transform first coefficients, REAL,0(0,100), 0,0
+Item10=二次系数, Transform second coefficients, REAL,0(0,100), 0,0
+[Record switch information]
+Key=DI
+ShowMode=2
+Sum=2
+Item1=No, No, BYTE,192(0,255), 0,0
+Item2=识别符/名称, Flag/Name, STRING,Undefine(0,50), 0,0
+[Setpoint control word description]
+Key=KG_SETs
+ShowMode=2
+Sum=6
+Item1=Group, Group, BYTE,144(0,254), 0,0
+Item2=Entry, Entry, BYTE,0(0,255), 0,0
+Item3=Cpu, CPU No, BYTE,0(0,255), 0,0
+Item4=Zone, Zone No, BYTE,0(0,255), 0,0
+Item5=BitSeqs, Bit seqs, BYTE,0(0,15), 0,0
+Item6=Desc, Desc, STRING,(0,50), 0,0
+[Soe information asymmetry]
+Key=SOE
+ShowMode=2
+Sum=3
+Item1=GROUP, Group, BYTE,16(16,255), 0,0
+Item2=ENTRY, Entry, BYTE,0(0,255), 0,0
+Item3=soe控点名, soe ctrl name, STRING,0(0,80), 0,0
+[Two-position DIG information]
+Key=RDIG
+ShowMode=2
+Sum=3
+Item1=GROUP, Group, BYTE,16(16,255), 0,0
+Item2=ENTRY, Entry, BYTE,0(0,255), 0,0
+Item3=遥信控点名, Ctrl name of DIG, STRING,0(0,80), 0,0
+[Accumulation information]
+Key=POW
+ShowMode=2
+Sum=4
+Item1=内部组号, Group, BYTE,96(0,255), 0,0
+Item2=内部条目号, Entry, BYTE,0(0,255), 0,0
+Item3=控点名, 2000 protocol ctrl name, STRING,0(0,15), 0,0
+Item4=描述, Accumulation desc, STRING,Undefine(0,50), 0,0
+[Setting coefficient information]
+Key=SET_PARA
+ShowMode=2
+Sum=4
+Item1=定值组号, Setting group, BYTE,144(0,255), 0,0
+Item2=定值CPU号, Setting CPU No, BYTE,1(0,8), 0,0
+Item3=定值的序号, Setting No(start from 1), BYTE,1(0,255), 0,0
+Item4=系数, Setting coefficient, REAL,1(0,10000), 0,0
+[Fault para]
+Key=FAULT_PARA
+ShowMode=2
+Sum=14
+Item1=内部组号, Group, BYTE,224(1,254), 0,0
+Item2=内部条目号, Entry, BYTE,1(0,254), 0,0
+Item3=CPU, CPU号, BYTE,1(0,255), 0,0
+Item4=103组号, 103 group, BYTE,224(0,255), 0,0
+Item5=103条目号, 103 entry, BYTE,1(0,255), 0,0
+Item6=ParaType, Para type, WORD_HEX,0(0,65535), 0,0
+Item7=DataType, Data type, ENUM,0(0:Float,1:Int,2:Control word type,3:Desc), 0,0
+Item8=MIN, Min, REAL,0(0,10000), 0,0
+Item9=MAX, Max, REAL,0(0,10000), 0,0
+Item10=STEP, Step, REAL,0(0,100), 0,0
+Item11=精度n, Accuracy n(Invalid control word), REAL,0(0,100), 0,0
+Item12=精度m, Accuracy m(Invalid control word), REAL,0(0,100), 0,0
+Item13=UNIT, Unit(Invalid control word), STRING,0(0,10), 0,0
+Item14=描述, Desc, STRING,0(0,50), 0,0
+[Set point information]
+Key=SETPOINT
+ShowMode=2
+Sum=5
+Item1=内部组号, Group, BYTE,234(0,255), 0,0
+Item2=内部条目号, Entry, BYTE,1(1,255), 0,0
+Item3=控点名, 2000 protocol ctrl name, STRING,0(0,15), 0,0
+Item4=属性, Set point attribute, ENUM,6(2:Unsigned int 16,6:Monitoring 200E （three-byte floating point）,86:Continuous remote adjustment （three-byte floating point）,5:Old and control remote adjustment（four-byte floating point）), 0,0
+Item5=描述, Desc, STRING,Undefine(0,50), 0,0
+[Setting plate]
+Key=SET_YABAN
+ShowMode=2
+Sum=7
+Item1=SET_GROUP, Group, BYTE,144(0,255), 0,0
+Item2=SET_ENTRY, Entry, BYTE,1(0,255), 0,0
+Item3=DIG_GROUP, Relate DIG group, BYTE,16(0,255), 0,0
+Item4=DIG_ENTRY, Relate DIG entry, BYTE,1(0,255), 0,0
+Item5=CTRL_GROUP, Relate CTRL group, BYTE,128(0,255), 0,0
+Item6=CTRL_ENTRY, Relate CTRL entry, BYTE,1(0,255), 0,0
+Item7=DESC, Desc, STRING,Undefine(0,50), 0,0
+[Alarm information]
+Key=ALARM
+ShowMode=2
+Sum=5
+Item1=内部组号, Group, BYTE,192(0,255), 0,0
+Item2=内部条目号, Entry, BYTE,0(0,255), 0,0
+Item3=保护类型, 2000 protocol protect type, BYTE,0(0,255), 0,0
+Item4=告警编码, Alarm code, BYTE,0(0,255), 0,0
+Item5=描述, Alarm point desc, STRING,Undefine(0,50), 0,0
+[Dev para]
+Key=DEV_PARA
+ShowMode=2
+Sum=12
+Item1=GROUP, GROUP, BYTE,144(0,255), 0,0
+Item2=CPU, CPU, BYTE,1(0,255), 0,0
+Item3=ZONE, ZONE, BYTE,16(0,255), 0,0
+Item4=NO, NO, BYTE,1(0,255), 0,0
+Item5=TYPE, Set data type, ENUM,1(0:Float,1:Int,2:Control word,3:Desc), 0,0
+Item6=MIN/KGBits, MIN/KGBits, REAL,0(0,100), 0,0
+Item7=MAX, Max(Invalid control word), REAL,0(0,65535), 0,0
+Item8=STEP, Step(Invalid control word), REAL,0(0,100), 0,0
+Item9=精度n, Accuracy n(Invalid control word), REAL,0(0,100), 0,0
+Item10=精度m, Accuracy m(Invalid control word), REAL,0(0,100), 0,0
+Item11=UNIT, Unit(Invalid control word), STRING,0(0,5), 0,0
+Item12=描述, Desc, STRING,Undefine(0,50), 0,0

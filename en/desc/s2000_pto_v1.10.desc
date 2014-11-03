@@ -1,0 +1,35 @@
+[base]
+code = ascii
+name = 转出2000规约
+doc version = v1.10
+tool = 1326 config tool
+tool version = v1.10
+last modified datetime = 2007-1-9 14:27
+
+[Dev information]
+Key=DEV
+ShowMode=2
+Sum=8
+Item1=DevID, Dev ID, BYTE,1(0,255), 0,1
+Item2=CpuIDSrc, Src CPU ID, BYTE,1(0,255), 0,1
+Item3=PtoIDSrc, Src prtocol ID, BYTE,1(0,255), 0,1
+Item4=DevIDSrc, Src Dev ID, BYTE,1(0,255), 0,1
+Item5=模板名, Template, STRING,CSC101A(0,50), 0,1
+Item6=LinkAddr, Link address(H), WORD_HEX,1(0,32767), 0,1
+Item7=SetType, Setting type, ENUM,0(0:Manager3380,1:Protect331A), 0,1
+Item8=装置描述, Dev desc, STRING,0(0,50), 0,1
+[Common]
+Key=COMMON
+ShowMode=1
+Sum=4
+Item1=DEBUG, Debug, ENUM,0(0:Unable,1:Enable), 0,1
+Item2=SET_CLOCK, Set clock, ENUM,0(0:No,1:Yes), 0,1
+Item3=PREPARE_TIME, Propare time（s）, WORD,90(0,65535), 0,1
+Item4=LOCK_DIG_ID, Lock DIG ID, STRING,0H(0,500), 255,1
+[Protocol information]
+Key=s2000
+ShowMode=1
+Sum=3
+Item1=DEV_SEND_CYCLE, Dev send interval（s）, INT,10(3,32767), 0,1
+Item2=DEV_MODULE_VERSION, Dev modul version, BYTE,0(0,255), 0,1
+Item3=ENABLE_OSC_FTP_MODE, OSC Ftp Mode enable, ENUM,0(0:Unable,1:Enable), 0,1

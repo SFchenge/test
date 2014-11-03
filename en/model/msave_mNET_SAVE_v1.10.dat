@@ -1,0 +1,38 @@
+[base]
+code = ascii
+name = 网络存储器接入
+doc version = v1.20
+tool = 1326 config tool
+tool version = v1.10
+last modified datetime = 2007-1-9 14:27
+
+DIG=内部组号,内部条目号,YxType,描述
+SET_ELEMENT=GROUP,CPU,ZONE,NO,TYPE,MIN/KGBits,MAX,STEP,精度n,精度m,UNIT,描述
+KG_SETs=Group,Entry,Cpu,Zone,BitSeqs,Desc
+ANA=内部组号,内部条目号,Ratio1,死区1,Min,Max,Unit,描述
+[DIG]
+16,1,0,系统故障
+16,2,0,容量越限
+17,1,0,风扇1故障
+17,2,0,风扇2故障
+17,3,0,风扇3故障
+17,4,0,温度越限
+17,5,0,电源1故障
+17,6,0,电源2故障
+17,7,0,UPS故障
+18,1,0,硬盘1出错
+18,2,0,硬盘2出错
+18,3,0,硬盘3出错
+18,4,0,硬盘4出错
+18,5,0,硬盘5出错
+18,6,0,硬盘6出错
+18,7,0,硬盘7出错
+18,32,0,RAID0出错
+18,31,0,RAID1出错
+255,255,5,通讯状态
+[SET_ELEMENT]
+[KG_SETs]
+[ANA]
+64,1,1,0.001,0,100,无,版本号
+64,2,1,1,0,100,无,已用磁盘容量百分比
+64,3,1,1,1024,65535,MB,磁盘总容量

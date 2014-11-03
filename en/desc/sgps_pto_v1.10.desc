@@ -1,0 +1,24 @@
+[base]
+code = ascii
+name = GPS通信协议
+doc version = v1.10
+tool = 1326 config tool
+tool version = v1.10
+last modified datetime = 2007-1-9 14:27
+
+[公共字段信息]
+关键字=COMMON
+显示方式=1
+数目=2
+项目1=DEBUG, 调试状态, ENUM,0(0:不启用,1:启用), 0,1
+项目2=SET_CLOCK, 是否需要对时, ENUM,1(0:不,1:是), 0,1
+[规约信息]
+关键字=GPS
+显示方式=1
+数目=6
+项目1=GPS_DEV, 所接GPS装置, ENUM,CSN-1(CSN-1:四方CSN-1,SH2006BGPS:双合2006BGPS,BSS:水科院BSS,KH:科汇,KH2000:科汇2000,DM200C:杭州讯之,SZ-2U:南京英奥SZ), 0,1
+项目2=DEBUG_ON, 调试状态, BOOL,0, 0,1
+项目3=GPS_DISPLAY_ON, GPS信息显示, BOOL,0, 0,1
+项目4=SET_CLOCK_ON, 是否接收并向下对时, BOOL,0, 0,1
+项目5=SET_INTERVAL, 向下对时间隔（分钟）, INT,1(1,65535), 0,1
+项目6=GPS_OVERTIME, GPS超时时间（分钟）, INT,8(2,65535), 0,1

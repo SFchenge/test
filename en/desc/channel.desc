@@ -1,0 +1,73 @@
+[base]
+code = ascii 	         	    
+name = ethpb
+tool=1326 config tool
+tool version = V1.10bata
+doc version=V1.20
+last modified datetime =2007-1-9 14:27
+
+[通道配置信息]
+关键字=CHN
+显示方式=2
+数目=6
+项目1=通道号,通道编号,BYTE,1(1,20)
+项目2=通道名,通道模板名称,STRING,0(0,15)
+项目3=ID号,规约ID号,BYTE,1(1,20)
+项目4=最大报文长度,最大报文长度,BYTE,255(1,8192)
+项目5=上行报文个数,上行报文个数,BYTE,10(1,8192)
+项目6=下行报文个数,下行报文个数,BYTE,10(1,8192)
+
+[串口通道配置信息]
+关键字=ccom
+显示方式=2
+数目=5
+项目1=通道号,串口通道编号,BYTE,1(1,20)
+项目2=串口号,串口号,ENUM,/tyCo/1(/tyCo/1:串口1,/tyCo/2:串口2,/tyCo/3:串口3,/tyCo/4:串口4,/tyCo/5:串口5,/tyCo/6:串口6)
+项目3=BPS,波特率,ENUM,5(1:300,2:600,3:1200,4:4800,5:9600,6:115200)
+项目4=校验位,奇偶校验位,ENUM,1(0:无校验,1:奇校验,2:偶校验)
+项目5=数据位,数据位数,BYTE,8(5,8)
+
+[TCP客户端配置信息]
+关键字=cclient
+显示方式=2
+数目=3
+项目1=编号,客户端编号,BYTE,1(1,20)
+项目2=Send IP,Send IP,STRING,192.168.1.99(0,15)
+项目3=Send Port,Send Port,WORD,8888(0,65535)
+
+[TCP服务端配置信息]
+关键字=cserver
+显示方式=2
+数目=3
+项目1=ID,服务端编号,BYTE,1(1,20)
+项目2=Port,Port,WORD,8888(0,65535)
+项目3=Remote IP,Remote IP,STRING,192.168.1.99(0,15)
+
+[网络UDP配置信息]
+关键字=cudp
+显示方式=2
+数目=5
+项目1=ID,UDP编号,BYTE,1(1,20)
+项目2=IP,IP,STRING,192.168.1.99(0,15)
+项目3=RecvPort,RecvPort,WORD,8888(0,65535)
+项目4=Send IP,Send IP,STRING,192.168.1.99(0,15)
+项目5=Send Port,Send Port,WORD,8888(0,65535)
+
+[网络UDP2000配置信息]
+关键字=cudp2000
+显示方式=2
+数目=7
+项目1=ID,UDP2000编号,BYTE,1(1,20)
+项目2=IP1,IP1,STRING,192.168.1.99(0,15)
+项目3=IP2,IP2,STRING,192.168.2.99(0,15)
+项目4=IP3,IP3,STRING,0(0,15)
+项目5=RecvPort1,RecvPort1,WORD,1888(0,65535)
+项目6=RecvPort2,RecvPort2,WORD,1888(0,65535)
+项目7=SendPort,SendPort,WORD,1889(0,65535)
+
+[LON配置信息]
+关键字=clon
+显示方式=2
+数目=2
+项目1=ID,LON编号,BYTE,1(1,20)
+项目2=lonId,lonId,BYTE,0(1,20)

@@ -1,0 +1,164 @@
+[base]
+code = ascii
+name = 61850接入规约
+doc version = v1.40
+tool = 1326 config tool
+tool version = v1.10
+last modified datetime = 2007-1-9 14:27
+
+[DIG information]
+Key=DIG
+ShowMode=2
+Sum=8
+Item1=内部组号, Group, BYTE,16(0,255), 0,0
+Item2=内部条目号, Entry, BYTE,1(0,255), 0,0
+Item3=Type, Message type, ENUM,0(0:Common DIG,1:Alarm,2:Event,3:Virtual DIG), 0,0
+Item4=61850编号, 61850 no, WORD,0(0,65535), 0,0
+Item5=数据类型, Data type, STRING,BOOLEAN(0,50), 0,0
+Item6=sfaddr, sfaddr, STRING,0(0,50), 0,0
+Item7=YxType, DIG TYPE, ENUM,0(0:Switch,1:Protect event,2:Soft,3:hard,4:Alarm,5:Communication status,6:Self-check info,7:Start signal,8:Out signal,9:Reclose signal,10:Revert signal), 0,0
+Item8=描述, Desc, STRING,(0,50), 0,0
+[ANA information]
+Key=ANA
+ShowMode=2
+Sum=11
+Item1=内部组号, Group, BYTE,64(0,255), 0,0
+Item2=内部条目号, Entry, BYTE,0(0,255), 0,0
+Item3=Ratio1, Ratio, REAL,1(0,100), 0,0
+Item4=死区1, Dead zone, REAL,0.1(0,100), 0,0
+Item5=61850编号, 61850 no, WORD,0(0,65535), 0,0
+Item6=数据类型, Data type, STRING,FLOAT32(0,50), 0,0
+Item7=sfaddr, sfaddr, STRING,0(0,50), 0,0
+Item8=Min, Min, REAL,0(0,100), 0,0
+Item9=Max, Max, REAL,0(0,100), 0,0
+Item10=Unit, Unit, STRING,V(0,5), 0,0
+Item11=描述, Desc, STRING,0(0,50), 0,0
+[CTRL information]
+Key=CTRL
+ShowMode=2
+Sum=7
+Item1=内部组号, Group, BYTE,128(0,255), 0,0
+Item2=内部条目号, Entry, BYTE,0(0,255), 0,0
+Item3=61850编号, 61850 no, WORD,0(0,65535), 0,0
+Item4=是否直控, Whether direct control, BOOL,0, 0,0
+Item5=数据类型, Data type, STRING,SPC(0,50), 0,0
+Item6=sfaddr, sfaddr, STRING,0(0,50), 0,0
+Item7=描述, Desc, STRING,0(0,50), 0,0
+[CTRL relate DIG]
+Key=RELA_DIG_CTRL
+ShowMode=2
+Sum=5
+Item1=GROUP, Group, BYTE,128(0,255), 0,0
+Item2=ENTRY, Entry, BYTE,0(0,255), 0,0
+Item3=YX_GROUP, DIG group, BYTE,16(0,255), 0,0
+Item4=YX_ENTRY, DIG entry, BYTE,1(0,255), 0,0
+Item5=描述, Desc, STRING,Undefine(0,50), 0,0
+[Setting information]
+Key=SET
+ShowMode=2
+Sum=4
+Item1=内部组号, Group, BYTE,144(0,255), 0,0
+Item2=内部条目号, Entry, BYTE,0(0,255), 0,0
+Item3=Cpu号/定值表号, Cpu no/Setting table no, BYTE,1(0,100), 0,0
+Item4=定值区号, Setting zone no, BYTE,0(0,255), 0,0
+[Zone information]
+Key=ZONE
+ShowMode=2
+Sum=4
+Item1=内部组号, Group, BYTE,208(0,255), 0,0
+Item2=内部条目号, Entry, BYTE,0(0,255), 0,0
+Item3=Cpu号/定值表号, Cpu no/Setting table no, BYTE,1(0,100), 0,0
+Item4=定值区号, Setting zone no, BYTE,0(0,255), 0,0
+[Setting element]
+Key=SET_ELEMENT
+ShowMode=2
+Sum=14
+Item1=GROUP, GROUP, BYTE,144(0,255), 0,0
+Item2=CPU, CPU, BYTE,1(0,255), 0,0
+Item3=ZONE, ZONE, BYTE,16(0,255), 0,0
+Item4=NO, NO, BYTE,1(0,255), 0,0
+Item5=TYPE, Data type, ENUM,0(0:Float,1:Int,2:Control word,3:Desc), 0,0
+Item6=MIN/KGBits, MIN/KGBits, REAL,0(0,100), 0,0
+Item7=MAX, MAX(Invalid control word), REAL,0(0,65535), 0,0
+Item8=STEP, Step(Invalid control word), REAL,0(0,100), 0,0
+Item9=精度n, Accuracy n(Invalid control word), REAL,0(0,100), 0,0
+Item10=精度m, Accuracy m(Invalid control word), REAL,0(0,100), 0,0
+Item11=变比系数, Ratio coefficient, REAL,1(-10000,10000), 0,0
+Item12=备用, Reserve, REAL,0(0,100), 0,0
+Item13=UNIT, Unit(Invalid control word), STRING,(0,5), 0,0
+Item14=描述, Desc, STRING,0(0,50), 0,0
+[Setting control word desc]
+Key=KG_SETs
+ShowMode=2
+Sum=6
+Item1=Group, Group, BYTE,144(0,254), 0,0
+Item2=Entry, Entry, BYTE,0(0,255), 0,0
+Item3=Cpu, CPU no, BYTE,0(0,255), 0,0
+Item4=Zone, Setting zone no, BYTE,0(0,255), 0,0
+Item5=BitSeqs, BitSeqs, BYTE,0(0,15), 0,0
+Item6=Desc, Desc, STRING,(0,50), 0,0
+[Event information]
+Key=EVENT
+ShowMode=2
+Sum=8
+Item1=内部组号, Group, BYTE,176(0,255), 0,0
+Item2=内部条目号, Entry, BYTE,0(0,255), 0,0
+Item3=61850编号, 61850 no, WORD,0(0,65535), 0,0
+Item4=对应遥信内部组号, Relate DIG group, BYTE,16(0,255), 0,0
+Item5=对应遥信内部条目号, Relate DIG entry, BYTE,0(0,255), 0,0
+Item6=61850编号, 61850 no, WORD,0(0,65535), 0,0
+Item7=数据类型, Date, STRING,ACT(0,50), 0,0
+Item8=描述, Event desc, STRING,0(0,50), 0,0
+[Fault para]
+Key=FAULT_PARA
+ShowMode=2
+Sum=14
+Item1=GROUP, Group, BYTE,224(0,255), 0,0
+Item2=ENTRY, Entry, BYTE,1(0,255), 0,0
+Item3=CPU, CPU no, BYTE,1(0,255), 0,0
+Item4=103组号, 103 Group, BYTE,224(0,255), 0,0
+Item5=103条目号, 103 Entry, BYTE,1(0,255), 0,0
+Item6=ParaType, Para type, WORD_HEX,0(0,65535), 0,0
+Item7=DataType, Data type, ENUM,0(0:Float,1:Int,2:Control word,3:Desc), 0,0
+Item8=MIN, Min, REAL,0(0,10000), 0,0
+Item9=MAX, Max, REAL,0(0,10000), 0,0
+Item10=STEP, Step, REAL,0(0,100), 0,0
+Item11=精度n, Accuracy n(Invalid control word), REAL,0(0,100), 0,0
+Item12=精度m, Accuracy m(Invalid control word), REAL,0(0,100), 0,0
+Item13=UNIT, Unit(Invalid control word), STRING,0(0,10), 0,0
+Item14=描述, Desc, STRING,0(0,50), 0,0
+[Set point information]
+Key=SETPOINT
+ShowMode=2
+Sum=8
+Item1=内部组号, Group, BYTE,128(0,255), 0,0
+Item2=内部条目号, Entry, BYTE,0(0,255), 0,0
+Item3=61850编号, 61850 no, WORD,0(0,65535), 0,0
+Item4=是否直控, Whether direct control, BOOL,0, 0,0
+Item5=数据类型, Data type, STRING,SPC(0,50), 0,0
+Item6=sfaddr, Sequence Coding, STRING,(0,80), 0,0
+Item7=IP, Dev IP, WORD_HEX,0(0,ffff), 0,0
+Item8=描述, Desc, STRING,0(0,50), 0,0
+[Record config]
+Key=COMMON
+ShowMode=1
+Sum=1
+Item1=OSC_FILE_LIST, OSC file list size, WORD,30(0,65535), 0,0
+[Dev para]
+Key=DEV_PARA
+ShowMode=2
+Sum=14
+Item1=GROUP, GROUP, BYTE,144(0,255), 0,0
+Item2=CPU, CPU, BYTE,1(0,255), 0,0
+Item3=ZONE, ZONE, BYTE,16(0,255), 0,0
+Item4=NO, NO, BYTE,1(0,255), 0,0
+Item5=TYPE, Setting type, ENUM,0(0:Float,1:Int,2:Control word,3:Desc), 0,0
+Item6=MIN/KGBits, MIN/KGBits, REAL,0(0,100), 0,0
+Item7=MAX, MAX(Invalid control word), REAL,0(0,65535), 0,0
+Item8=STEP, Step(Invalid control word), REAL,0(0,100), 0,0
+Item9=精度n, Accuracy n(Invalid control word), REAL,0(0,100), 0,0
+Item10=精度m, Accuracy m(Invalid control word), REAL,0(0,100), 0,0
+Item11=变比系数, Ratio coefficient, REAL,1(-10000,10000), 0,0
+Item12=备用, Reserve, REAL,0(0,100), 0,0
+Item13=UNIT, Unit(Invalid control word), STRING,(0,5), 0,0
+Item14=描述, Desc, STRING,0(0,50), 0,0

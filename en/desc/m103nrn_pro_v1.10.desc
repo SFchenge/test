@@ -1,0 +1,48 @@
+[base]
+code = ascii
+name = 南瑞以太网103接入规约
+doc version = V1.20
+tool = 1326 config tool
+tool version = V1.10bata
+last modified datetime = 2007-4-10 10:03
+
+[装置信息]
+关键字=ADDRESS
+显示方式=2
+数目=5
+项目1=内部规约地址, 内部规约地址, BYTE,1(1,254), 0,0
+项目2=规约地址(H), 规约地址(H), WORD_HEX,1(0,ffff), 0,1
+项目3=装置模板名称, 装置模板名称, STRING,mRCS921(1,24), 0,0
+项目4=装置主网IP, 装置主网IP, STRING,198.121.0.2(1,24), 0,1
+项目5=装置备网IP, 装置备网IP, STRING,0.0.0.0(1,24), 0,1
+[公共字段信息]
+关键字=COMMON
+显示方式=1
+数目=11
+项目1=DEBUG, 调试状态, BOOL,0, 0,1
+项目2=SET_CLOCK, 是否需要对时, ENUM,0(0:不,1:是), 0,1
+项目3=DATA_SYNC(M), 数据同步时间（分钟）, WORD,10(0,65535), 0,1
+项目4=SYN_OFFSET, SYN_OFFSET, ENUM,1(1:奇数分对时,2:偶数分对时), 0,1
+项目5=FAULT_ENABLE, 是否支持录波, ENUM,1(0:不,1:是), 0,1
+项目6=OSC_FILE_LIST_NUM, 文件列表长度, WORD,20(0,65535), 0,1
+项目7=OSC_FILE_CALL_OVERTIME(M), 召唤文件超时时间（分钟）, WORD,10(0,65535), 0,1
+项目8=OSC_FILE_ADD_POINT, 录波文件是否补点, ENUM,0(0:不,1:是), 0,1
+项目9=CTRL_ENABLE, 是否支持遥控(投退压板/修改定值/切换定值区), ENUM,1(0:不,1:是), 0,1
+项目10=SET_BAK_SUM, 召唤定值的后台数目, BYTE,5(1,255), 0,1
+项目11=MAS_SET_DOWN_SUM, 批量修改定值的最大数目, BYTE,10(1,255), 0,1
+[规约字段信息]
+关键字=m103nrn
+显示方式=1
+数目=12
+项目1=FRAME_INTERVAL(MS), 帧间隙(毫秒), WORD,600(0,65535), 0,1
+项目2=FRAME_OVERTIME(MS), 帧超时时间(毫秒), WORD,1000(0,65535), 0,1
+项目3=GI_INTERVAL(M), 总召唤时间(分钟), WORD,30(0,65535), 0,1
+项目4=ANA_INTERVAL(M), 模拟量召唤时间(分钟), WORD,2(0,65535), 0,1
+项目5=DIS_ACT_DELAY(M), 通信状态延迟上送时间(分钟), WORD,0(0,65535), 0,1
+项目6=LocalIpAddrMas, 本地主网IP(废弃), ENUM,NET1(NET1:NET1,NET2:NET2,NET3:NET3,NET4:NET4), 0,1
+项目7=LocalIpAddrSla, 本地备网IP(废弃), STRING,0(0,24), 0,1
+项目8=Is9782GateWay, 是否是南瑞9782网关(无效), ENUM,0(0:不是,1:是), 0,1
+项目9=GateWayNODE, 南瑞9782网关节点地址(无效), WORD_HEX,ff0e(0,ffff), 0,1
+项目10=CALL_LUBO_TIME, 记录录波的起始时间, STRING,2011-01-04-14-47(0,50), 0,1
+项目11=STATIONADDR, 子站地址, WORD_HEX,fe02(0,ffff), 0,1
+项目12=UDP_TYPE, UDP发送方式, ENUM,0(0:广播,1:点对点), 0,1

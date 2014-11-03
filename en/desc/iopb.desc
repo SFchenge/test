@@ -1,0 +1,24 @@
+[base]
+code = ascii 	         	    
+name = iopb
+tool=1326 config tool
+tool version = V1.10bata
+doc version=V1.20
+last modified datetime =2007-1-9 14:27
+
+[IO配置信息]
+关键字=IO
+显示方式=1
+数目=1
+项目1=CpuId,CpuId,BYTE,14(1,20)
+
+[DO配置信息]
+关键字=DO
+显示方式=2
+数目=6
+项目1=IoCardNo,IoCardNo,BYTE,14(1,255)
+项目2=DoNo,DoNo,ENUM,0(0:第一路开出,1:第二路开出)
+项目3=CpuId,CpuId,BYTE,1(1,255)
+项目4=ptoId,ptoId,BYTE,250(1,255)
+项目5=ptoId,开出类型,ENUM,0(0:无,1:通信中断,2:电铃,3:电笛)
+项目6=ptoId,备用1,BYTE,1(1,255)

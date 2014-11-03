@@ -1,0 +1,34 @@
+[base]
+code = ascii
+name = alt
+doc version = V1.20
+tool = 1326 config tool
+tool version = V1.10bata
+last modified datetime = 2007-1-9 14:27
+
+[system]
+Key=SYS
+ShowMode=1
+Sum=7
+Item1=DEFAULT_MASTER, default master, ENUM,1(0:slave,1:master), 0,1
+Item2=NET_SAVE_MODE, net save mode, BOOL,0
+Item3=DEBUG, debug, BOOL,0, 0,1
+Item4=MAS_POINT_ID, master point id, STRING,0(0,80), 0,1
+Item5=SLA_POINT_ID, slave point id, STRING,0(0,80), 0,1
+Item6=AUTO_SWITCH, auto switch, ENUM,0(0:NO,1:Yes), 0,1
+Item7=SPECIAL_MODE, area mode, ENUM,0(0:default<auto switch>,1:shanghai<not auto switch>), 0,1
+[net]
+Key=NET
+ShowMode=1
+Sum=3
+Item1=ANOTHER_IP, another IP, STRING,192.168.110.100(11,15), 0,1
+Item2=HOSTPORT, host port, INT,4000(0,65535), 0,1
+Item3=REMOTEPORT, remote port, INT,4000(0,65535), 0,1
+[sync]
+Key=SYNC
+ShowMode=1
+Sum=4
+Item1=CLK_SYNC, clock SYNC, BOOL,0, 0,1
+Item2=SOE_SYNC, SOE SYNC, BOOL,0, 0,1
+Item3=SET_SYNC, setting SYNC, BOOL,0, 0,1
+Item4=OSC_SYNC, OSC SYNC, BOOL,0, 0,1

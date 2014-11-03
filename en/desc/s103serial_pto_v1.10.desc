@@ -1,0 +1,36 @@
+[base]
+code = ascii
+name = 串口103转出规约
+doc version = v1.20
+tool = 1326 config tool
+tool version = v1.10
+last modified datetime = 2007-1-9 14:27
+
+[装置基本信息]
+关键字=DEV
+显示方式=2
+数目=9
+项目1=DevID, 装置ID, BYTE,1(0,255), 0,0
+项目2=CpuIDSrc, 来自接入插件号, BYTE,1(0,255), 0,0
+项目3=PtoIDSrc, 来自接入规约号, BYTE,1(0,255), 0,0
+项目4=DevIDSrc, 来自接入装置号, BYTE,1(0,255), 0,0
+项目5=模板名, 模板名, STRING,CSC101A(0,50), 0,1
+项目6=LinkAddr, 链路地址, BYTE,1(0,255), 0,1
+项目7=FUN, 功能码, BYTE,178(0,500), 0,1
+项目8=OscEnable, 是否有录波, BOOL,0, 0,1
+项目9=装置描述, 装置的具体描述信息, STRING,0(0,50), 0,1
+[公共字段信息]
+关键字=COMMON
+显示方式=1
+数目=2
+项目1=DEBUG, 调试状态, ENUM,0(0:不启用,1:启用), 0,1
+项目2=SET_CLOCK, 是否需要对时, ENUM,1(0:不,1:是), 0,1
+[规约字段信息]
+关键字=s103serial
+显示方式=1
+数目=4
+项目1=protocol, 规约名称, STRING,103(0,10), 0,1
+项目2=STANDARD, 规约标准, STRING,HUAZHONG(0,24), 0,1
+项目3=FRAME_INTERVAL_MS, 帧间隔(毫秒), WORD,500(0,65536), 0,1
+项目4=FRAME_OVERTIME_MS, 帧超时时间(毫秒), WORD,2000(0,65536), 0,1
+

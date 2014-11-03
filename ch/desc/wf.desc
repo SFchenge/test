@@ -1,0 +1,23 @@
+[base]
+code = ascii
+name = mgr
+doc version = V1.20
+tool = 1326 config tool
+tool version = V1.10bata
+last modified datetime = 2007-1-9 14:27
+
+[参数信息]
+关键字=WFSERVER
+显示方式=1
+数目=1
+项目1=IP, 连接主机的IP, STRING,(0,15), 0,1
+[五防点配置信息]
+关键字=WF
+显示方式=2
+数目=6
+项目1=CPU, CPU, BYTE,1(1,255), 0,1
+项目2=PTO, PTO, BYTE,1(1,255), 0,1
+项目3=DEV, DEV, BYTE,1(1,255), 0,1
+项目4=GROUP, GROUP, BYTE,1(1,255), 0,1
+项目5=ENTRY, ENTRY, BYTE,1(1,255), 0,1
+项目6=SFADDR, 四方控点名, STRING,0(0,15), 0,1

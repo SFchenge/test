@@ -1,0 +1,32 @@
+[base]
+code = ascii
+name = 山大IV型录波器接入
+doc version = v1.10
+tool = 1326 config tool
+tool version = v1.10
+last modified datetime =  2007-1-9 14:27
+
+[装置信息]
+关键字=ADDRESS
+显示方式=2
+数目=3
+项目1=内部规约地址, 内部规约地址, BYTE,1(0,255), 0,0
+项目2=规约地址, 规约地址(H), BYTE_HEX,1(0,ff), 0,1
+项目3=装置模板名称, 装置模板名称, STRING,msd4(0,50), 0,0
+[公共字段信息]
+关键字=COMMON
+显示方式=1
+数目=7
+项目1=DEBUG, 调试状态, ENUM,0(0:不启用,1:启用), 0,1
+项目2=SET_CLOCK, 是否需要对时, ENUM,0(0:不,1:是), 0,1
+项目3=DATA_SYNC(M), 数据同步时间(分钟), WORD,10(0,65535), 0,1
+项目4=SYN_OFFSET, SYN_OFFSET, WORD,2(0,65535), 0,1
+项目5=FAULT_ENABLE, 是否支持录波, ENUM,1(0:不,1:是), 0,1
+项目6=OSC_FILE_LIST_NUM, 文件列表长度, WORD,100(0,65535), 0,1
+项目7=OSC_FILE_CALL_OVERTIME(M), 召唤文件超时时间(分钟), WORD,10(0,65535), 0,1
+[规约字段信息]
+关键字=msd4
+显示方式=1
+数目=2
+项目1=FRAME_INTERVAL(MS), 帧间隔(毫秒), WORD,50(0,65535), 0,1
+项目2=FRAME_OVERTIME(MS), 帧超时时间(毫秒), WORD,1500(0,65535), 0,1

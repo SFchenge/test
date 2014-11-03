@@ -1,0 +1,23 @@
+[base]
+code = ascii
+name = mgr
+doc version = V1.20
+tool = 1326 config tool
+tool version = V1.10bata
+last modified datetime = 2007-1-9 14:27
+
+[Parameters]
+Key=WFSERVER
+ShowMode=1
+Sum=1
+Item1=IP, IP connect to master, STRING,(0,15), 0,1
+[WF Config]
+Key=WF
+ShowMode=2
+Sum=6
+Item1=CPU, CPU, BYTE,1(1,255), 0,1
+Item2=PTO, PTO, BYTE,1(1,255), 0,1
+Item3=DEV, DEV, BYTE,1(1,255), 0,1
+Item4=GROUP, GROUP, BYTE,1(1,255), 0,1
+Item5=ENTRY, ENTRY, BYTE,1(1,255), 0,1
+Item6=SFADDR, Sifang Tag name, STRING,0(0,15), 0,1

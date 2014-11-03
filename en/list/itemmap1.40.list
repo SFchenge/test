@@ -1,0 +1,10 @@
+[m61850]
+DIG=GROUP,ENTRY,Type,61850No,DataType,sfaddr,YxType,Desc
+ANA=GROUP,ENTRY,Ratio1,dead band,61850No,DataType,sfaddr,Min,Max,Unit,Desc
+CTRL=GROUP,ENTRY,61850No,Ctrl_DIRECT,DataType,sfaddr,Desc
+EVENT=GROUP,ENTRY,61850No,dig_bus_group,dig_bus_entry,61850No,DataType,Desc
+SET=GROUP,ENTRY,CpuNo/Set_Table_No,Zone_no
+ZONE=GROUP,ENTRY,CpuNo/Set_Table_No,Zone_no
+SET_ELEMENT=GROUP,CPU,ZONE,NO,TYPE,MIN/KGBits,MAX,STEP,precision_n,precision_m,UNIT,Desc
+KG_SETs=GROUP,ENTRY,Cpu,Zone,BitSeqs,Desc
+FAULT_PARA=GROUP,ENTRY,Cpu,ParaType,precision_n,precision_m,UNIT,Desc

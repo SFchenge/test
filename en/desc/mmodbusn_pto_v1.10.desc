@@ -1,0 +1,45 @@
+[base]
+code = ascii
+name = 通用Modbus接入规约
+doc version = v1.10
+tool = 1326 config tool
+tool version = v1.10
+last modified datetime = 2007-1-9 14:27
+
+[COMMON Information]
+Key=COMMON
+ShowMode=1
+Sum=8
+Item1=DEBUG, Debug, BOOL,0, 0,1
+Item2=SET_CLOCK, Set clock, ENUM,0(0:No,1:Yes), 0,1
+Item3=DATA_SYNC(M), Data sync(M), WORD,10(0,65535), 0,1
+Item4=SYN_OFFSET, Syn offset, WORD,2(0,65535), 0,1
+Item5=FAULT_ENABLE, Fault enable, ENUM,0(0:No,1:Yes), 0,1
+Item6=OSC_FILE_LIST_NUM, OSC file list num, WORD,20(0,65535), 0,1
+Item7=OSC_FILE_CALL_OVERTIME(M), OSC file call overtime (m), WORD,10(0,65535), 0,1
+Item8=OSC_FILE_ADD_POINT, OSC file add point, ENUM,1(0:No,1:Yes), 0,1
+[Deivce information]
+Key=ADDRESS
+ShowMode=2
+Sum=3
+Item1=内部规约地址, Inner Address, BYTE,1(1,255), 0,0
+Item2=装置地址, Device Address(H), BYTE_HEX,1(0,ff), 0,1
+Item3=装置模板名称, Model Name, STRING,0(0,50), 0,0
+[Protocol field information]
+Key=mmodbusn
+ShowMode=1
+Sum=4
+Item1=PROTOCAL_TYPE, PROTOCAL_TYPE, ENUM,0(0: serial Modbus,1:Ethernet Modbus), 0,1
+Item2=CRC_ORDER, CRC_ORDER, ENUM,0(0:LowByte First,1:HighByte First), 0,1
+Item3=FRAME_INTERVAL(MS), FRAME_INTERVAL(MS), WORD,800(0,65535), 0,1
+Item4=FRAME_OVERTIME(MS), FRAME_OVERTIME(MS), WORD,1000(0,65535), 0,1
+[Device QUERY information]
+Key=DEV_QUERY_TABLE
+ShowMode=2
+Sum=6
+Item1=装置地址, Device Address(H), BYTE_HEX,1(0,ff), 0,1
+Item2=功能类型, function type, ENUM,DIG(DIG:DIG,ANA:ANA,POW:POW), 0,1
+Item3=功能码, Function code(H), BYTE_HEX,3(1,7), 0,1
+Item4=寄存器类型, Register type, ENUM,0(0:0_winding,1:1_Discrete input,3:3_Input register,4:4_Holding register,7:7_Abnormal state), 0,1
+Item5=起始寄存器地址(或线圈地址), Register start Address or winding Address, WORD_HEX,0(0,ffff), 0,1
+Item6=读寄存器个数(或线圈个数), read Register Num or winding Num(H), WORD_HEX,0(0,ffff), 0,1

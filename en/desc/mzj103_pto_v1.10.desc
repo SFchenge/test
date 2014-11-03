@@ -1,0 +1,40 @@
+[base]
+code = ascii
+name = 浙江串口103接入规约
+doc version = V1.20
+tool = 1326 config tool
+tool version = V1.10bata
+last modified datetime = 2007-4-16 14:27
+
+[装置信息]
+关键字=ADDRESS
+显示方式=2
+数目=6
+项目1=内部规约地址, 内部规约地址, BYTE,1(1,255), 0,0
+项目2=103规约地址(H), 103规约地址(H), BYTE_HEX,11(0,ff), 0,1
+项目3=装置模板名称, 装置模板名称, STRING,0(0,50), 0,0
+项目4=应用层起始地址(H), 应用层起始地址(H), BYTE_HEX,0(0,ff), 0,1
+项目5=应用层地址数目, 应用层地址数目, BYTE,1(0,20), 0,1
+项目6=参数类型序号, 非0还需配置事件参数类型转化表配置文件EvtParaTabX.ini, BYTE,0(0,20), 0,1
+
+[公共字段信息]
+关键字=COMMON
+显示方式=1
+数目=7
+项目1=DEBUG, 调试状态, BOOL,0, 0,1
+项目2=SET_CLOCK, 是否需要对时, ENUM,0(0:不,1:是), 0,1
+项目3=DATA_SYNC(M), 数据同步时间(分钟), WORD,10(0,65535), 0,1
+项目4=SYN_OFFSET, SYN_OFFSET, WORD,2(0,65535), 0,1
+项目5=FAULT_ENABLE, 是否支持录波, ENUM,0(0:不,1:是), 0,1
+项目6=OSC_FILE_LIST_NUM, 文件列表长度, WORD,20(0,65535), 0,1
+项目7=OSC_FILE_CALL_OVERTIME(M), 召唤文件超时时间（分钟）, WORD,10(0,65535), 0,1
+
+[规约字段信息]
+关键字=mzj103
+显示方式=1
+数目=5
+项目1=FRAME_INTERVAL(MS), 帧间隔(毫秒), WORD,600(0,65535), 0,1
+项目2=FRAME_OVERTIME(MS), 帧超时时间(毫秒), WORD,1000(0,65535), 0,1
+项目3=GI_INTERVAL(M), 总召唤时间(分钟), WORD,30(0,65535), 0,1
+项目4=ANA_INTERVAL(M), 模拟量召唤时间(分钟), WORD,2(0,65535), 0,1
+项目5=ASDU_STANDARD, ASDU类型, ENUM,1(0:专用范围,1:通用分类服务), 0,1

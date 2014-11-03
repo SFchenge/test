@@ -1,0 +1,37 @@
+[base]
+code = ascii
+name = 武汉方得录波器接入
+doc version = v1.20
+tool = 1326 config tool
+tool version = v1.10
+last modified datetime = 2009-5-31 14:33
+
+[装置信息]
+关键字=ADDRESS
+显示方式=2
+数目=3
+项目1=内部规约地址, 内部规约地址, BYTE,1(0,255), 0,0
+项目2=设备IP, 设备IP, STRING,192.168.10.100(1,24), 0,1
+项目3=装置模板名称, 装置模板名称, STRING,mFTR(0,50), 0,0
+
+[公共字段信息]
+关键字=COMMON
+显示方式=1
+数目=7
+项目1=DEBUG, 调试状态, ENUM,0(0:不启用,1:启用), 0,1
+项目2=SET_CLOCK, 是否需要对时, ENUM,1(0:不,1:是), 0,1
+项目3=DATA_SYNC(M), 数据同步时间(分钟), WORD,10(0,65535), 0,1
+项目4=SYN_OFFSET, SYN_OFFSET, WORD,2(0,65535), 0,1
+项目5=FAULT_ENABLE, 是否支持录波, ENUM,1(0:不,1:是), 0,1
+项目6=OSC_FILE_LIST_NUM, 文件列表长度, WORD,220(0,65535), 0,1
+项目7=OSC_FILE_CALL_OVERTIME(M), 召唤文件超时时间(分钟), WORD,10(0,65535), 0,1
+
+[规约字段信息]
+关键字=mFTR
+显示方式=1
+数目=5
+项目1=FTP_INTERVAL(S), FTP时间间隔(秒), WORD,60(0,65535), 0,1
+项目2=FTP_USER, FTP用户名, STRING,replay(0,100), 0,1
+项目3=FTP_PASSWORD, FTP密码, STRING,hathaway(0,100), 0,1
+项目4=FTP_PATH_LUBO_LIST, 录波列表路径, STRING,D:/DFR_Comtrade/message(0,100), 0,1
+项目5=CALL_LUBO_TIME, 起始录波时间, STRING,2009-05-31-10-25(0,50), 0,1

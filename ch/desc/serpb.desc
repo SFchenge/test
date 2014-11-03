@@ -1,0 +1,39 @@
+[base]
+code = ascii 	         	    
+name = serpb
+tool=1326 config tool
+tool version = V1.10bata
+doc version=V1.20
+last modified datetime =2007-5-31 09:27
+
+[看门狗配置信息]
+关键字=WATCHDOG
+显示方式=1
+数目=1
+项目1=WATCHDOGEN,是否起动看门狗,ENUM,1(0:不,1:是)
+[时区]
+关键字=TIMEZONE
+显示方式=2
+数目=2
+项目1=时区偏移(分钟),时区偏移(分钟),INT,480(-720,720)
+项目2=时区名称,时区名称,STRING,beijing(0,30)
+[调试任务启动信息]
+关键字=RUN
+显示方式=1
+数目=1
+项目1=DEBUG_EN,是否启动调试任务,ENUM,1(0:不,1:是)
+[按通道接入装置]
+关键字=DEV_BY_CHN
+显示方式=1
+数目=1
+项目1=DEV_BY_CHN_EN,装置按通道配置使能,ENUM,0(0:不,1:是)
+[打印信息显示语言]
+关键字=LANGUAGE
+显示方式=1
+数目=1
+项目1=LanguageEN,语言选择,ENUM,1(0:英文显示,1:中文显示)
+[NFS取消共享目录]
+关键字=NFS
+显示方式=1
+数目=1
+项目1=NFS_DISEN,是否取消共享目录,ENUM,0(0:不,1:是)

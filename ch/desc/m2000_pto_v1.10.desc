@@ -1,0 +1,52 @@
+[base]
+code = ascii
+name = CSC2000接入规约
+doc version = V1.20
+tool = 1326 config tool
+tool version = V1.10bata
+last modified datetime = 2007-1-9 14:27
+
+[装置信息]
+关键字=ADDRESS
+显示方式=2
+数目=8
+项目1=内部规约地址, 内部规约地址, BYTE,1(0,255), 0,0
+项目2=2000规约地址(H), 2000规约地址(H), WORD_HEX,0(0,1ff), 0,1
+项目3=装置模板名称, 装置模板名称, STRING,0(0,50), 0,0
+项目4=装置录波报文地址(H), 装置录波报文地址(H), BYTE_HEX,0(0,ff), 0,1
+项目5=插件或CPU号, 装置报文来自的插件或CPU号(10进制), BYTE_HEX,1(1,ff), 0,1
+项目6=PTO ID, PTO ID(10进制), BYTE,1(0,20), 0,1
+项目7=IPA, A网IP, STRING,(0,80), 0,1
+项目8=IPB, B网IP, STRING,(0,80), 0,1
+[公共字段信息]
+关键字=COMMON
+显示方式=1
+数目=9
+项目1=DEBUG, 调试状态, ENUM,0(0:不启用,1:启用), 0,1
+项目2=SET_CLOCK, 是否需要对时, ENUM,0(0:不,1:是), 0,1
+项目3=DATA_SYNC(M), 数据同步时间(分钟), WORD,10(0,65535), 0,1
+项目4=SYN_OFFSET, SYN_OFFSET, ENUM,1(1:奇数分对时,2:偶数分对时), 0,1
+项目5=FAULT_ENABLE, 是否支持录波, ENUM,0(0:不,1:是), 0,1
+项目6=OSC_FILE_LIST_NUM, 文件列表长度, WORD,30(0,65535), 0,1
+项目7=OSC_FILE_CALL_OVERTIME(M), 召唤文件超时时间(分钟), WORD,10(0,65535), 0,1
+项目8=SET_BAK_SUM, 召唤定值的后台数目, BYTE,5(1,255), 0,1
+项目9=MAS_SET_DOWN_SUM, 批量修改定值的最大数目, BYTE,10(1,255), 0,1
+[规约描述信息]
+关键字=m2000
+显示方式=1
+数目=7
+项目1=COMM_OVERTIME, 装置通讯中断时间（秒）, INT,30(30,500), 0,1
+项目2=FJ_AVC_CTRL, 福建AVC, BOOL,0, 0,1
+项目3=OSC_INTERVAL_SEC, 定时召唤长录波的时间间隔(秒), BYTE,60(0,255), 0,1
+项目4=MASTER_ADDRESS, 主站录波地址, BYTE,3(0,255), 0,1
+项目5=PROGCTRL_ENABLE, 顺控使能, ENUM,0(1:顺控使能,0:顺控关闭), 0,1
+项目6=CURVE_ENABLE, 曲线使能, ENUM,0(1:曲线使能,0:曲线功能关闭), 0,1
+项目7=CURVE_FTP_ENABLE, 曲线以FTP方式传输, ENUM,0(1:曲线FTP使能（屏蔽曲线报文下发）,0:曲线FTP功能关闭（以报文方式下发）), 0,1
+[曲线配置]
+关键字=CURVE
+显示方式=2
+数目=4
+项目1=Curve_Add, 曲线地址, INT,26369(0,65535), 0,1
+项目2=Lon_Add, 装置地址（H）, WORD_HEX,0(0,1ff), 0,1
+项目3=Curve_No, 曲线编号, WORD,1(0,65535), 0,1
+项目4=interval, 间隔时间, WORD,5(0,65535), 0,1

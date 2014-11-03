@@ -1,0 +1,34 @@
+[base]
+code = ascii
+name = Modbus接入规约
+doc version = v1.10
+tool = 1326 config tool
+tool version = v1.10
+last modified datetime = 2007-1-9 14:27
+
+[装置信息]
+Key=ADDRESS
+ShowMode=2
+Sum=3
+Item1=内部规约地址, 内部规约地址, BYTE,1(1,255), 0,1
+Item2=装置地址, 装置地址(H), BYTE_HEX,11(0,ff), 0,1
+Item3=装置模板名称, 装置模板名称, STRING,0(0,50), 0,1
+[公共字段信息]
+Key=COMMON
+ShowMode=1
+Sum=4
+Item1=DEBUG, 调试状态, BOOL,0, 0,1
+Item2=SET_CLOCK, 是否需要对时, ENUM,0(0:不,1:是), 0,1
+Item3=DATA_SYNC(M), 数据同步时间(分钟), WORD,10(0,65535), 0,1
+Item4=SYN_OFFSET, SYN_OFFSET, WORD,2(0,65535), 0,1
+[规约字段信息]
+Key=mModbus
+ShowMode=1
+Sum=7
+Item1=DEV_TYPE, 装置类型, ENUM,1(1:宁国UPS,2:宁国直流屏,3:宁国蓄电池), 0,1
+Item2=DIG_ENABLE, 遥信使能, BOOL,0, 0,1
+Item3=ANA_ENABLE, 遥测使能, BOOL,0, 0,1
+Item4=DIG_FUN, 遥信功能码, BYTE,1(0,255), 0,1
+Item5=ANA_FUN, 遥测功能码, BYTE,2(0,255), 0,1
+Item6=FRAME_INTERVAL(MS), 帧间隔(毫秒), WORD,800(0,65535), 0,1
+Item7=FRAME_OVERTIME(MS), 帧超时时间(毫秒), WORD,1000(0,65535), 0,1

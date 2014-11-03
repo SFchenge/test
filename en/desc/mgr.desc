@@ -1,0 +1,32 @@
+[base]
+code = ascii
+name = mgr
+doc version = V1.20
+tool = 1326 config tool
+tool version = V1.10bata
+last modified datetime = 2007-1-9 14:27
+
+[Parameter]
+Key=MANAGER
+ShowMode=1
+Sum=9
+Item1=SETTIME_SWITCH_ENABLE,Set time enable, BOOL,0, 0,1
+Item2=MASTER_LOCK_ENABLE, Master lock enable , BOOL,0, 0,1
+Item3=PRIMARY_ENABLE, Host enable, BOOL,0, 0,1
+Item4=SWITCH_TIMEOUT, Switch timeout(Min), BYTE,1(1,2), 0,1
+Item5=WORKSTATE_ENABLE, Work state register enable, BOOL,0, 0,1
+Item6=RTU_HEARTBEAT_TIMEOUT, RTU heartbeat timeout(Min), BYTE,10(1,100), 0,1
+Item7=GPS_HEARTBEAT_TIMEOUT, GPS heartbeat timeout(Min), BYTE,15(1,100), 0,1
+Item8=MASTER_ID, Master ID, BYTE,8(1,255), 0,1
+Item9=MASTER_NAME, Master Name, STRING,MASTER(0,15), 0,1
+[Remote Control Lock INfo.]
+Key=MGRYK
+ShowMode=2
+Sum=7
+Item1=CPU, CPU, BYTE,1(1,255), 0,1
+Item2=PTO, PTO, BYTE,1(1,255), 0,1
+Item3=DEV, DEV, BYTE,1(1,255), 0,1
+Item4=GROUP, GROUP, BYTE,1(1,255), 0,1
+Item5=ENTRY, ENTRY, BYTE,1(1,255), 0,1
+Item6=SFADDR, SFADDR, BYTE,1(1,255), 0,1
+Item7=OBJ, OBJ, BYTE,1(1,255), 0,1

@@ -1,0 +1,62 @@
+[base]
+code = ascii
+name = ??
+doc version = v1.20
+tool = 1326 config tool
+tool version = v1.10
+last modified datetime = 2007-1-9 14:27
+
+[Common]
+Key=COMMON
+ShowMode=1
+Sum=19
+Item1=DEBUG, Debug, ENUM,0(0:Unable,1:Enable), 0,1
+Item2=SET_CLOCK, Set clock, ENUM,0(0:No,1:Yes), 0,1
+Item3=PA_FRZ_INTERVAL, Pulse freeze cycle£¨m£©, WORD,3(0,65535), 255,1
+Item4=ANASAVE_TIME, ANA automatic storage interval£¨m£©, WORD,0(0,65535), 0,1
+Item5=RECORD_DIR, Record dir, STRING,ANA_SAVE(0,500), 255,1
+Item6=ADJUST_CLOCK, Adjust clock, ENUM,1(0:No,1:Yes), 0,1
+Item7=BAUD_RATE, Communication baud rate, ENUM,600(300:300,600:600,1200:1200,2400:2400,4800:4800,9600:9600,19200:19200), 0,1
+Item8=CHECK_MODE, Check mode, ENUM,0(0:No check,1:Odd check,2:Evne check), 0,1
+Item9=PREPARE_TIME, Data prepare time£¨s£©, WORD,90(0,65535), 0,1
+Item10=LOCK_DIG_ID, Lock DIG ID, STRING,0H(0,500), 255,1
+Item11=SOE_FILT_TIME, SOE save time£¨s£©, INT,0(0,360000), 0,1
+Item12=SWITCH_LOCK_DIG_SERIAL, Switch lock DIG serial, STRING,0H(0,500), 255,1
+Item13=DEV_SWITCH, Double Data source switching enable, ENUM,0(1:Enable,0:Unable), 0,1
+Item14=MAS_CHECK, MAS check, ENUM,0(1:Yes,0:No), 0,1
+Item15=QDS_CHECK, QDS check, ENUM,0(1:Yes,0:No), 0,1
+Item16=SOE_SYN_EN, SOE syn enable, ENUM,0(1:Yes,0:No), 0,1
+Item17=CTRL_TIME, CTRL overtime£¨s£©, INT,30(10,360000), 0,1
+Item18=FUN_TAG, Fun tag, CTRL_WORD,0(0.Whether recording history information.0|No/1|Yes,1.Whether filter SOE.0|No/1|Yes,2.Send process data of ANA.0|No/1|Yes,3.Shielding DIG process data.0|No/1|Yes,4.Reserve4.0|No/1|Yes,5.Reserve5.0|No/1|Yes,6.Reserve6.0|No/1|Yes,7.Reserve7.0|No/1|Yes), 0,1
+Item19=CLOCK_OFFSET_ANA, Clock offset ANA, STRING,0H(0,500), 255,1
+[Protocol information]
+Key=sdnp
+ShowMode=1
+Sum=14
+Item1=MASTER_ADDR, Master link address(H), WORD_HEX,1(0,ffff), 0,1
+Item2=STANDARD, Standard, ENUM,4(0:guangzhou,1:beijing,2:xi'an north,3:xi'an east,4:xi'an nanrui,5:guangdong huizhou,6:hui'an D200,7:shanxi,8:shijiazhuang,9:zhuhai kedong,10:foushan), 0,1
+Item3=CONFIRM_OVERTIME, confirm overtime(ms), WORD,2000(0,65535), 0,1
+Item4=AP_CONFIRM, Support the main station to confirm whether or not, BOOL,0, 0,1
+Item5=AP_RESEND, Application layer retransmission times, BYTE,0(0,255), 0,1
+Item6=EN_UNSO_SEND, Support for non-response to the request or not, BOOL,0, 0,1
+Item7=SYN_DELAY, Delay time synchronization school, WORD,0(0,65535), 0,1
+Item8=TIME_ZONE_DIFF, Time Zone Correction, INT,8(0,500), 0,1
+Item9=MULTI_FRAME, Supports sending multiple frames, BOOL,0, 0,1
+Item10=LINK_TIME_OUT, Link timeout (s), WORD,30(0,65535), 0,1
+Item11=PRO_TAG, Protocol control word, CTRL_WORD,0(0.Reserve0.0|No/1|Yes,1.Reserve1.0|No/1|Yes,2.Reserve2.0|No/1|Yes,3.Reserve3.0|No/1|Yes,4.Reserve4.0|No/1|Yes,5.Reserve5.0|No/1|Yes,6.Reserve6.0|No/1|Yes,7.Reserve7.0|No/1|Yes), 0,1
+Item12=APDATA_DIGMAX, Single post DIG Mam num£¨0 is no limit£©, WORD,0(0,65535), 0,1
+Item13=APDATA_ANAMAX, Single post ANG Mam num£¨0 is no limit£©, WORD,0(0,65535), 0,1
+Item14=FRAME_SUM, Frame sum, WORD,3(1,65535), 0,1
+[RTU information]
+Key=RTU
+ShowMode=2
+Sum=2
+Item1=RTUID, RTUID, BYTE,0(0,255), 0,1
+Item2=RTUÁ´Â·µØÖ·, RTU link address(H), WORD_HEX,1(0,ffff), 0,1
+[SOE synchronization object information]
+Key=SOE_SYN_INFO
+ShowMode=2
+Sum=3
+Item1=NUM, Num, BYTE,1(1,19), 0,1
+Item2=CPU, CPU ID, BYTE,1(1,255), 0,1
+Item3=PTO, Protocol ID, BYTE,1(1,255), 0,1

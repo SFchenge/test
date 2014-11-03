@@ -1,0 +1,34 @@
+[base]
+code = ascii
+name = 银山YS900A录波器接入
+doc version = v1.10
+tool = 1326 config tool
+tool version = v1.10
+last modified datetime = 2007-1-9 14:27
+
+[公共字段信息]
+关键字=COMMON
+显示方式=1
+数目=7
+项目1=DEBUG, 调试状态, BOOL,0, 0,1
+项目2=SET_CLOCK, 是否需要对时, ENUM,0(0:不,1:是), 0,1
+项目3=DATA_SYNC(M), 数据同步时间（分钟）, WORD,10(0,30), 0,1
+项目4=SYN_OFFSET, SYN_OFFSET, ENUM,1(1:奇数分对时,2:偶数分对时), 0,1
+项目5=FAULT_ENABLE, 是否支持录波, ENUM,1(0:不,1:是), 0,1
+项目6=OSC_FILE_LIST_NUM, 文件列表长度, WORD,100(0,500), 0,1
+项目7=OSC_FILE_CALL_OVERTIME(M), 召唤文件超时时间（分钟）, WORD,10(0,60), 0,1
+[装置信息]
+关键字=ADDRESS
+显示方式=2
+数目=4
+项目1=内部规约地址, 内部规约地址, BYTE,1(1,254), 0,0
+项目2=规约地址(H), 规约地址(H), BYTE_HEX,1(0,ff), 0,1
+项目3=装置模板名称, 装置模板名称, STRING,mys900a(1,24), 0,0
+项目4=装置IP地址, 装置IP地址, STRING,192.168.1.201(1,16), 0,1
+[规约字段信息]
+关键字=mys900a
+显示方式=1
+数目=3
+项目1=FRAME_INTERVAL(MS), 帧间隙(毫秒), WORD,1000(0,65535), 0,1
+项目2=FRAME_OVERTIME(MS), 帧超时时间(毫秒), WORD,2000(0,65535), 0,1
+项目3=CALL_LUBO_TIME, 记录录波的起始时间, STRING,2009-10-10-10-25(0,50), 0,1

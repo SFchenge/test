@@ -1,0 +1,57 @@
+[base]
+code = ascii
+name = 通用Modbus接入规约
+doc version = v1.10
+tool = 1326 config tool
+tool version = v1.10
+last modified datetime = 2007-1-9 14:27
+
+[DIG information]
+Key=DIG
+ShowMode=2
+Sum=9
+Item1=内部组号, Group, BYTE,16(0,255), 0,0
+Item2=内部条目号, Entry, BYTE,0(0,255), 0,0
+Item3=寄存器类型, Register type, ENUM,0(0:0_loop,1:1_discrete Input,3:3_input Register,4:4_holding Register,7:7_abnormal state), 0,0
+Item4=信息地址, Register(loop) address, WORD_HEX,0(0,ffff), 0,0
+Item5=位地址, Bit address, BYTE,0(0,255), 0,0
+Item6=SOE标记, SOE tag, ENUM,0(0:DIG,1:SOE), 0,0
+Item7=复归模式, Reset mode, ENUM,0(0:Not auto reset,1:10 s auto reset,2:Backgroud reset), 0,0
+Item8=YxType, DIG type, ENUM,0(0:Switch,1:Protect event,2:Soft,3:Hard,4:Abnormal alarm,5:Communication status,6:Self-test information), 0,0
+Item9=描述, Desc, STRING,Unknown(0,50), 0,0
+[ANA information]
+Key=ANA
+ShowMode=2
+Sum=11
+Item1=内部组号, Group, BYTE,64(0,255), 0,0
+Item2=内部条目号, Entry, BYTE,0(0,255), 0,0
+Item3=Ratio, Ratio, REAL,1(0,1), 0,0
+Item4=死区, Dead zone, REAL,0.001(0,100), 0,0
+Item5=寄存器类型, Register type, ENUM,4(3:3_Input register,4:4_Holding register), 0,0
+Item6=信息地址, Register address, WORD_HEX,0(0,ffff), 0,0
+Item7=遥测类型, ANA type, ENUM,1(1:Signed 16-bit integer（orginal code）,2:Signed 16-bit integer（complement）,3:Unsigned 16-bit integer,4:Signed 32-bit integer（orginal code）,5:Signed 32-bit integer（complement）,6:Unsigned 32-bit intege,7:4-byte floating-point number （high byte first）,8:4-byte floating point （little endian）,9:2-byte BCD code), 0,0
+Item8=Min, Min, REAL,0(0,100), 0,0
+Item9=Max, Max, REAL,0(0,65535), 0,0
+Item10=Unit, Unit, STRING,V(0,5), 0,0
+Item11=描述, Desc, STRING,Undefine(0,50), 0,0
+[Power information]
+Key=POW
+ShowMode=2
+Sum=6
+Item1=内部组号, Group, BYTE,96(0,255), 0,0
+Item2=内部条目号, Entry, BYTE,0(0,255), 0,0
+Item3=寄存器类型, Register type, ENUM,3(3:3_Input register,4:4_Holding register), 0,0
+Item4=信息地址, Register address, WORD_HEX,0(0,ffff), 0,0
+Item5=遥脉类型, Power type, ENUM,6(6:Unsigned 32-bit integer,7:4-byte floating-point number（high byte first）,8:4-byte floating point（little endian）), 0,0
+Item6=描述, Desc, STRING,Undefine(0,50), 0,0
+[Ctrl information]
+Key=CTRL
+ShowMode=2
+Sum=7
+Item1=内部组号, Group, BYTE,128(0,255), 0,0
+Item2=内部条目号, Entry, BYTE,0(0,255), 0,0
+Item3=遥控功能码, Remote control function to write functional code, ENUM,05(05:05_Force Single Coil,06:06_Preset Single Register), 0,0
+Item4=信息地址, Register address, WORD_HEX,0(0,ffff), 0,0
+Item5=遥控ON写入值, Timely control value written Modbus register, WORD_HEX,ff00(0,ffff), 0,0
+Item6=遥控OFF写入值, Control timeshare value written Modbus register, WORD_HEX,0(0,ffff), 0,0
+Item7=描述, Desc, STRING,Unknown(0,50), 0,0

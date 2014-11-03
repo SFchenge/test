@@ -1,0 +1,45 @@
+[base]
+code = ascii
+name = 通用Modbus接入规约
+doc version = v1.10
+tool = 1326 config tool
+tool version = v1.10
+last modified datetime = 2007-1-9 14:27
+
+[公共字段信息]
+关键字=COMMON
+显示方式=1
+数目=8
+项目1=DEBUG, 调试状态, BOOL,0, 0,1
+项目2=SET_CLOCK, 是否需要对时, ENUM,0(0:不,1:是), 0,1
+项目3=DATA_SYNC(M), 数据同步时间(分钟), WORD,10(0,65535), 0,1
+项目4=SYN_OFFSET, SYN_OFFSET, WORD,2(0,65535), 0,1
+项目5=FAULT_ENABLE, 是否支持录波, ENUM,0(0:不,1:是), 0,1
+项目6=OSC_FILE_LIST_NUM, 文件列表长度, WORD,20(0,65535), 0,1
+项目7=OSC_FILE_CALL_OVERTIME(M), 召唤文件超时时间（分钟）, WORD,10(0,65535), 0,1
+项目8=OSC_FILE_ADD_POINT, 录波文件是否补点, ENUM,1(0:不,1:是), 0,1
+[装置信息]
+关键字=ADDRESS
+显示方式=2
+数目=3
+项目1=内部规约地址, 内部规约地址, BYTE,1(1,255), 0,0
+项目2=装置地址, 装置地址(H), BYTE_HEX,1(0,ff), 0,1
+项目3=装置模板名称, 装置模板名称, STRING,0(0,50), 0,0
+[规约字段信息]
+关键字=mmodbusn
+显示方式=1
+数目=4
+项目1=PROTOCAL_TYPE, 规约类型, ENUM,0(0:串口Modbus,1:以太网Modbus), 0,1
+项目2=CRC_ORDER, CRC校验顺序, ENUM,0(0:低字节在前（标准）,1:高字节在前), 0,1
+项目3=FRAME_INTERVAL(MS), 帧间隔(毫秒), WORD,800(0,65535), 0,1
+项目4=FRAME_OVERTIME(MS), 帧超时时间(毫秒), WORD,1000(0,65535), 0,1
+[装置轮询信息]
+关键字=DEV_QUERY_TABLE
+显示方式=2
+数目=6
+项目1=装置地址, 装置地址(H), BYTE_HEX,1(0,ff), 0,1
+项目2=功能类型, 功能类型, ENUM,DIG(DIG:遥信,ANA:遥测,POW:遥脉), 0,1
+项目3=功能码, 功能码(H), BYTE_HEX,3(1,7), 0,1
+项目4=寄存器类型, 寄存器类型, ENUM,0(0:0_线圈,1:1_离散量输入,3:3_输入寄存器,4:4_保持寄存器,7:7_异常状态), 0,1
+项目5=起始寄存器地址(或线圈地址), 起始寄存器地址(或线圈地址)(H), WORD_HEX,0(0,ffff), 0,1
+项目6=读寄存器个数(或线圈个数), 读寄存器个数(或线圈个数)(H), WORD_HEX,0(0,ffff), 0,1

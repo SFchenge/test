@@ -1,0 +1,52 @@
+[base]
+code = ascii
+name = CSC2000接入规约
+doc version = V1.20
+tool = 1326 config tool
+tool version = V1.10bata
+last modified datetime = 2007-1-9 14:27
+
+[Address]
+Key=ADDRESS
+ShowMode=2
+Sum=8
+Item1=内部规约地址, Protocol addr, BYTE,1(0,255), 0,0
+Item2=2000规约地址(H), 2000 protocol addr(H), WORD_HEX,0(0,1ff), 0,1
+Item3=装置模板名称, Dev tmplate name, STRING,0(0,50), 0,0
+Item4=装置录波报文地址(H), Dev record message addr(H), BYTE_HEX,0(0,ff), 0,1
+Item5=插件或CPU号, CPU num(D), BYTE_HEX,1(1,ff), 0,1
+Item6=PTO ID, PTO ID(D), BYTE,1(0,20), 0,1
+Item7=IPA, A net IP, STRING,(0,80), 0,1
+Item8=IPB, B net IP, STRING,(0,80), 0,1
+[Common]
+Key=COMMON
+ShowMode=1
+Sum=9
+Item1=DEBUG, Debug, ENUM,0(0:Unable,1:Enable), 0,1
+Item2=SET_CLOCK, Set clock, ENUM,0(0:No,1:Yes), 0,1
+Item3=DATA_SYNC(M), Data sync(M), WORD,10(0,65535), 0,1
+Item4=SYN_OFFSET, Syn offset, ENUM,1(1:Odd minute sys,2:偶数分对时), 0,1
+Item5=FAULT_ENABLE, Fault enable, ENUM,0(0:No,1:Yes), 0,1
+Item6=OSC_FILE_LIST_NUM, OSC file list num, WORD,30(0,65535), 0,1
+Item7=OSC_FILE_CALL_OVERTIME(M), OSC file call overtime(M), WORD,10(0,65535), 0,1
+Item8=SET_BAK_SUM, Set bak sum, BYTE,5(1,255), 0,1
+Item9=MAS_SET_DOWN_SUM, Mas set down sum, BYTE,10(1,255), 0,1
+[m2000]
+Key=m2000
+ShowMode=1
+Sum=7
+Item1=COMM_OVERTIME, Commumication overtime(s), INT,30(30,500), 0,1
+Item2=FJ_AVC_CTRL, Fujian AVC ctrl, BOOL,0, 0,1
+Item3=OSC_INTERVAL_SEC, OSC interval(s), BYTE,60(0,255), 0,1
+Item4=MASTER_ADDRESS, Master address, BYTE,3(0,255), 0,1
+Item5=PROGCTRL_ENABLE, Progctrl enable, ENUM,0(1:Sequential control enable,0:Sequential control unable), 0,1
+Item6=CURVE_ENABLE, Curve enable, ENUM,0(1:Curve enable,0:Curve unable), 0,1
+Item7=CURVE_FTP_ENABLE, Curve ftp enable, ENUM,0(1:Curve ftp enable,0:Curve ftp unable), 0,1
+[Curve]
+Key=CURVE
+ShowMode=2
+Sum=4
+Item1=Curve_Add, Curve address, INT,26369(0,65535), 0,1
+Item2=Lon_Add, Lon address(H), WORD_HEX,0(0,1ff), 0,1
+Item3=Curve_No, Curve No, WORD,1(0,65535), 0,1
+Item4=interval, interval, WORD,5(0,65535), 0,1

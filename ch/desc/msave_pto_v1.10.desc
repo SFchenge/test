@@ -1,0 +1,38 @@
+[base]
+code = ascii
+name = 网络存储器接入
+doc version = v1.20
+tool = 1326 config tool
+tool version = v1.10
+last modified datetime = 2007-1-9 14:27
+
+[公共字段信息]
+关键字=COMMON
+显示方式=1
+数目=7
+项目1=DEBUG, 调试状态, BOOL,0, 0,1
+项目2=SET_CLOCK, 是否需要对时, ENUM,0(0:不,1:是), 0,1
+项目3=DATA_SYNC(M), 数据同步时间（分钟）, WORD,10(0,30), 0,1
+项目4=SYN_OFFSET, SYN_OFFSET, ENUM,1(1:奇数分对时,2:偶数分对时), 0,1
+项目5=FAULT_ENABLE, 是否支持录波, ENUM,0(0:不,1:是), 0,1
+项目6=OSC_FILE_LIST_NUM, 文件列表长度, WORD,0(0,200), 0,1
+项目7=OSC_FILE_CALL_OVERTIME(M), 召唤文件超时时间（分钟）, WORD,0(0,60), 0,1
+[装置信息]
+关键字=ADDRESS
+显示方式=2
+数目=3
+项目1=内部规约地址, 内部规约地址, BYTE,1(1,254), 0,0
+项目2=规约地址(H), 规约地址(H), BYTE_HEX,1(0,ff), 0,1
+项目3=装置模板名称, 装置模板名称, STRING,msave(1,24), 0,0
+[规约字段信息]
+关键字=msave
+显示方式=1
+数目=8
+项目1=COMM_SUPPORT, 具备通讯功能, BOOL,1, 0,1
+项目2=HEART_BEAT_INTERVAL, 心跳间隔(秒_取自网络存储器配置), WORD,30(0,2000), 0,1
+项目3=MAX_LOST_HEART_BEAT_SUM, 最大允许丢失心跳次数, BYTE,3(3,255), 0,1
+项目4=NET_SAVER_IP_ADDR, 网络存储器的IP地址, STRING,192.168.0.62(4,24), 0,1
+项目5=CAPACITY_ALARM_LIMIT, 容量告警界限, BYTE,85(1,99), 0,1
+项目6=NFS_EXPORT_PATH, 网络存储器NFS服务开放路径, STRING,/export(2,64), 0,1
+项目7=UNIQUE_PATH, 本子站的路径标识码, STRING,A(1,32), 0,1
+项目8=UPGRADE_VERSION, 待升级的文件结构版本, ENUM,0(0:2.51版后（无需升级）,1:从V2.10版升级（录波文件直接存储）,2:从V2.43版升级（录波文件分年存储）), 0,1

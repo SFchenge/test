@@ -1,0 +1,31 @@
+[base]
+code = ascii
+name = 电科院SVC接入规约
+doc version = v1.10
+tool = 1326 config tool
+tool version = v1.10
+last modified datetime = 2007-1-9 14:27
+
+[装置信息]
+关键字=ADDRESS
+显示方式=2
+数目=3
+项目1=内部规约地址, 内部规约地址, BYTE,1(0,255), 0,0
+项目2=规约地址(H), 规约地址(H), WORD_HEX,ff(0,1ff), 0,1
+项目3=装置模板名称, 装置模板名称, STRING,0(0,50), 0,0
+[公共字段信息]
+关键字=COMMON
+显示方式=1
+数目=7
+项目1=DEBUG, 调试状态, ENUM,0(0:不启用,1:启用), 0,1
+项目2=SET_CLOCK, 是否需要对时, ENUM,0(0:不,1:是), 0,1
+项目3=DATA_SYNC(M), 数据同步时间(分钟), WORD,10(0,65535), 0,1
+项目4=SYN_OFFSET, SYN_OFFSET, ENUM,1(1:奇数分对时,2:偶数分对时), 0,1
+项目5=FAULT_ENABLE, 是否支持录波, ENUM,0(0:不,1:是), 0,1
+项目6=OSC_FILE_LIST_NUM, 文件列表长度, WORD,30(0,65535), 0,1
+项目7=OSC_FILE_CALL_OVERTIME(M), 召唤文件超时时间(分钟), WORD,10(0,65535), 0,1
+[规约描述信息]
+关键字=mDKYSVC
+显示方式=1
+数目=1
+项目1=COMM_OVERTIME, 装置通讯中断时间（秒）, INT,30(30,500), 0,1

@@ -1,0 +1,133 @@
+[base]
+code = ascii
+name = 故障分析任务
+doc version = v1.10
+tool = 1326 config tool
+tool version = v1.10
+last modified datetime = 2007-1-9 14:27
+
+[Dev information]
+Key=DEV
+ShowMode=2
+Sum=17
+Item1=DevID, Dev ID, BYTE,1(0,255), 0,0
+Item2=CpuIDSrc, Src CPU ID, BYTE,1(0,255), 0,0
+Item3=PtoIDSrc, Src protocol ID, BYTE,1(0,255), 0,0
+Item4=DevIDSrc, Src dev ID, BYTE,1(0,255), 0,0
+Item5=模板名, Template name, STRING,(0,50), 0,1
+Item6=PrimaryDevNo, Primary dev no, STRING,1(0,50), 0,1
+Item7=IEDType, IED type, ENUM,3(0:Sub station,1:Bus differential protection,2:Transformer protection,3:Line protection,4:Generator transformer protection,5:Circuit breaker protection,6:Reactor Protection,8:Capacitor protection,10:Fault recorder,11:Mother of protection,12:Low frequency splitting device,13:Measuring and control device,14:Automatic safety device,15:Other devices), 0,1
+Item8=RunState, Run state, ENUM,1(0:Stop,1:Run,2:Debug,3:Check code status,4:Undefine), 0,1
+Item9=Tag, Dev tag, STRING,(0,48), 0,1
+Item10=TypeName, Dev model, STRING,(0,48), 0,1
+Item11=Version, Version, STRING,(0,20), 0,1
+Item12=MajorAddr, Main network address, STRING,(0,16), 0,1
+Item13=SpareAddr, Preparation network address, STRING,(0,16), 0,1
+Item14=AttrLabel, Properties tab, CTRL_WORD,0(0.Use UTF8 format setting text.0|No use/1|Use,1.Whether to use the FAN number associated with a failure.0|Associated with a failure to use the default mode device/1|Mandatory use of the time frame associated with a failure,2.Whether the protection that comes with inherited fault report.1|Protection comes inherit fault reporting/0|Sub-station fault report generation), 0,1
+Item15=FaultLastMax, Failure maximum duration (s), BYTE,20(0,240), 0,1
+Item16=BAK_1, Reserve, BYTE,0(0,255), 0,1
+Item17=装置描述, Desc, STRING,(0,80), 0,1
+[Line config]
+Key=LINE_CONFIG
+ShowMode=2
+Sum=18
+Item1=LineNo, LineNo, STRING,0(1,40), 0,1
+Item2=RunState, RunState, ENUM,0(0:Stop,1:Running,2:Debug,3:Undefine), 0,1
+Item3=LineSWNo, LineSWNo, WORD,0(0,65535), 0,1
+Item4=LineVolGrade, LineVolGrade(Kv), WORD,0(0,65535), 0,1
+Item5=LineLen, LineLen(Km), REAL,0(0,100000), 0,1
+Item6=ZhengXuDz, ZhengXuDz(Ω), REAL,0(0,1000), 0,1
+Item7=ZhengXuDk, ZhengXuDk(Ω), REAL,0(0,1000), 0,1
+Item8=LingXuDz, LingXuDz(Ω), REAL,0(0,1000), 0,1
+Item9=LingXuDk, LingXuDk(Ω), REAL,0(0,1000), 0,1
+Item10=ZhengXuRk, ZhengXuRk(Ω), REAL,0(0,1000), 0,1
+Item11=LingXuRk, LingXuRk(Ω), REAL,0(0,1000), 0,1
+Item12=CTRatio, CTRatio, REAL,0(0,1000), 0,1
+Item13=SecondI, SecondI, ENUM,1(1:1A,5:5A), 0,1
+Item14=RelativeDevice, RelativeDevice, BYTE,0(0,255), 0,1
+Item15=EquipFlag, EquipFlag, STRING,(0,16), 0,1
+Item16=ForExtention1, ForExtention1, BYTE,0(0,255), 0,1
+Item17=ForExtention2, ForExtention2, BYTE,0(0,255), 0,1
+Item18=Name, Line name, STRING,(0,50), 0,1
+[Generator config]
+Key=MUXIAN_CONFIG
+ShowMode=2
+Sum=6
+Item1=母线编号, Generator no, STRING,0(1,40), 0,1
+Item2=运行状态, Run status, ENUM,1(0:Stop,1:Run), 0,1
+Item3=母线电压等级(Kv), Generator voltage(Kv), WORD,1(0,1000), 0,1
+Item4=接线方式, Wiring, BYTE,1(0,255), 0,1
+Item5=EquipFlag, Equipment flag, STRING,(0,15), 0,1
+Item6=母线名称, Generator name, STRING,Generator1(0,50), 0,1
+[Switch config]
+Key=SWITCH_CONFIG
+ShowMode=2
+Sum=6
+Item1=开关编号, Switch no, STRING,0(1,40), 0,1
+Item2=运行状态, Run status, ENUM,1(0:停用,1:运行), 0,1
+Item3=电压等级(Kv), Voltage(Kv), WORD,1(0,1000), 0,1
+Item4=开关类型, Switch type, ENUM,0(0:3/2Bus side switch,1:3/2Intermediate switch,2:Dual generator of the switch,3:Bypass Switch,4:Single generator disconnect switches,5:Line switch), 0,1
+Item5=EquipFlag, Equipment flag, STRING,(0,15), 0,1
+Item6=开关名称, Switch name, STRING,Switch1(0,50), 0,1
+[Transformer config]
+Key=TRANSFORMER_CONFIG
+ShowMode=2
+Sum=9
+Item1=变压器编号, Transformer no, STRING,0(1,40), 0,1
+Item2=变压器类型, Transformer type, ENUM,0(0:Dual Winding,1:Three winding), 0,1
+Item3=运行状态, Run status, ENUM,1(0:Stop,1:Run), 0,1
+Item4=高压侧电压等级, High side voltage level, WORD,1(0,1000), 0,1
+Item5=低压侧电压等级, Low-side voltage level, WORD,1(0,1000), 0,1
+Item6=中压侧电压等级, Voltage level of the pressure side, WORD,1(0,1000), 0,1
+Item7=额定容量(MVA), Rated Capacity(MVA), WORD,1(0,1000), 0,1
+Item8=EquipFlag, Equipment flag, STRING,(0,15), 0,1
+Item9=变压器名称, Transformer name, STRING,Transformer1(0,50), 0,1
+[Reactor Configuration]
+Key=REACTOR_CONFIG
+ShowMode=2
+Sum=6
+Item1=电抗器编号, Reactor No, STRING,0(1,40), 0,1
+Item2=运行状态, Run Status, ENUM,1(0:Stop,1:Run), 0,1
+Item3=电压等级(Kv), Voltage(Kv), WORD,1(0,1000), 0,1
+Item4=额定容量(MVar), Rated Capacity(MVar), WORD,1(0,1000), 0,1
+Item5=EquipFlag, Equipment flag, STRING,(0,15), 0,1
+Item6=电抗器名称, Reactor Name, STRING,Reactor1(0,50), 0,1
+[Capacitor Configuration]
+Key=CAPACITOR_CONFIG
+ShowMode=2
+Sum=6
+Item1=电容器编号, Capacitor No, STRING,0(1,40), 0,1
+Item2=运行状态, Run status, ENUM,1(0:Stop,1:Run), 0,1
+Item3=电压等级(Kv), Voltage(Kv), WORD,1(0,1000), 0,1
+Item4=额定容量(MVar), Rated Capacity(MVar), WORD,1(0,1000), 0,1
+Item5=EquipFlag, Equipment flag, STRING,(0,15), 0,1
+Item6=电容器名称, Capacitor name, STRING,Capacitor1(0,50), 0,1
+[Disconnecting link configuration]
+Key=DAOZHA_CONFIG
+ShowMode=2
+Sum=6
+Item1=刀闸编号, Disconnecting link No, STRING,0(1,40), 0,1
+Item2=刀闸类型, Disconnecting link type, ENUM,1(0:Non grounding,1:Grounding,2:Undefine), 0,1
+Item3=运行状态, Run Status, ENUM,1(0:Stop,1:Run), 0,1
+Item4=电压等级(Kv), Voltage(Kv), WORD,1(0,1000), 0,1
+Item5=EquipFlag, Equipment flag, STRING,(0,15), 0,1
+Item6=刀闸名称, Disconnecting link name, STRING,Disconnecting link1(0,50), 0,1
+[Common]
+Key=COMMON
+ShowMode=1
+Sum=4
+Item1=DEBUG, Debug, ENUM,0(0:Unable,1:Enable), 0,1
+Item2=SET_CLOCK, Set clock, ENUM,0(0:No,1:Yes), 0,1
+Item3=FAULT_SAVE_TIME, Fault save time(m), BYTE,5(5,255), 0,1
+Item4=FAULT_SAVE_YEARS, Fault save years, BYTE,5(1,30), 0,1
+[Protocol information]
+Key=FIA
+ShowMode=1
+Sum=7
+Item1=WRITE_REPORT_WAIT_TIME, Write report wait time(m), BYTE,30(2,255), 0,1
+Item2=GENERATE_SET_FILE, Generate set file, BOOL,0, 0,1
+Item3=SET_AUTO_CALL_INTERVAL, Auto call interval(m), WORD,0(0,65535), 0,1
+Item4=UNABRIDGED_CSC_MODLE, Unabridged CSC200 modle, BOOL,1, 0,1
+Item5=FAULT_FILE_MAX, Fault history  file max(M), ENUM,60(3:3M,6:6M,9:9M,30:30M,60:60M,90:90M), 0,1
+Item6=ALERT_FILE_MAX, Alarm history  file max(M), ENUM,30(3:3M,6:6M,9:9M,30:30M,60:60M,90:90M), 0,1
+Item7=SET_ZONE_AUTO_CALL_INTERVAL, Auto call setting zone, BOOL,0, 0,1

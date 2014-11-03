@@ -1,0 +1,115 @@
+[base]
+code = ascii
+name = ??
+doc version = v1.20
+tool = 1326 config tool
+tool version = v1.10
+last modified datetime = 2007-1-9 14:27
+
+[DIG information]
+Key=DIG
+ShowMode=2
+Sum=12
+Item1=cpu, CPU ID, BYTE,1(1,255), 0,1
+Item2=pto, Protocol ID, BYTE,1(1,255), 0,1
+Item3=dev, Dev ID, BYTE,1(1,255), 0,1
+Item4=内部组号, Group, BYTE,16(0,255), 1,1
+Item5=内部条目号, Entry, BYTE,0(0,255), 2,1
+Item6=RTUID, RTUID, BYTE,0(0,255), 0,1
+Item7=TAG, Tag, CTRL_WORD,0(2.Merge point 1 level logic.0|AND/1|OR,3.Merge point 2 level logic.0|AND/1|OR,4.Auto reset enable flag.0|No/1|Yes,6.Disable SOE flag.0|Not shielded/1|Shielded,7.DIG logic.0|Positive logic/1|Antilogical,0.Disable switch enable.1|Disable switch/0|Allow switch,1.Totle event type（Only 1 trigger，continue 10s）.0|No/1|Yes,5.Not sentenced to be sent directly change.0|No/1|Yes), 0,1
+Item8=TAGCmb1, Composite tag 1, BYTE,0(0,255), 0,1
+Item9=TAGCmb2, Composite tag 2, BYTE,0(0,255), 0,1
+Item10=POINTID, Point ID, WORD,0(0,65535), 0,1
+Item11=ATTRIBUTE, DIG type, ENUM,0(0:Single-point,1:Dual-point,2:Pseudo dual-point,3:Pseudo single-point), 0,1
+Item12=描述, Desc, STRING,Undefine(0,100), -1,1
+[ANA information]
+Key=ANA
+ShowMode=2
+Sum=14
+Item1=cpu, CPU ID, BYTE,1(1,255), 0,1
+Item2=pto, Protocol ID, BYTE,1(1,255), 0,1
+Item3=dev, Dev ID, BYTE,1(1,255), 0,1
+Item4=内部组号, Group, BYTE,64(0,255), 1,1
+Item5=内部条目号, Entry, BYTE,0(0,255), 2,1
+Item6=RTUID, RTUID, BYTE,0(0,255), 0,1
+Item7=死区值, Dead zone(%), REAL,0.1(0,100), 0,1
+Item8=转换系数, Ratio, REAL,1(0,65535), 0,1
+Item9=偏移, Offset, REAL,0(-65535,65535), 0,1
+Item10=总加遥测组号, Total ANA group, BYTE,0(0,255), 0,1
+Item11=总加遥测系数, Total ANA ratio, REAL,0(0,100), 0,1
+Item12=POINTID, Point ID, WORD,0(0,65535), 0,1
+Item13=ASDUType, ASDU type, ENUM,13(5:Step position information with a description of the quality,9:Normalized value with quality described,11:Scaled value with quality described,13:Short float with the quality described,21:Non-normalized value of the quality descriptor), 0,1
+Item14=描述, Desc, STRING,Undefine(0,500), -1,1
+[CTRL information]
+Key=CTRL
+ShowMode=2
+Sum=12
+Item1=cpu, CPU ID, BYTE,1(1,255), 0,1
+Item2=pto, Protocol ID, BYTE,1(1,255), 0,1
+Item3=dev, Dev ID, BYTE,1(1,255), 0,1
+Item4=内部组号, Group, BYTE,128(0,255), 1,1
+Item5=内部条目号, Entry, BYTE,0(0,255), 2,1
+Item6=RTUID, RTUID, BYTE,0(0,255), 0,1
+Item7=DigRtu, DIG RTU, BYTE,0(1,255), 0,1
+Item8=DigID, DIG RTU ID, WORD,0(0,65535), 0,1
+Item9=CtrlType, CTRL Type, ENUM,0(0:Ordinary CTRL,1:Reserve,2:Reserve,3:Reserve,4:Reserve,5:Reset,6:Sequencer remote control,7:Foshan switch), 0,1
+Item10=CtrlPara, CTRL para, BYTE,0(0,255), 0,1
+Item11=POINTID, Point ID, WORD,0(0,65535), 0,1
+Item12=描述, Desc, STRING,Undefine(0,100), -1,1
+[DIG lock dev config1]
+Key=YXLOCK
+ShowMode=2
+Sum=2
+Item1=YXID, DIG ID, WORD,0(0,65535), 0,1
+Item2=YXTAG, DIG Tag, STRING,0(0,80), 0,1
+[DIG lock dev config2]
+Key=YXLOCKINFO
+ShowMode=2
+Sum=4
+Item1=YXID, DIG ID, WORD,0(0,65535), 0,1
+Item2=cpu, cpu, BYTE,0(0,255), 0,1
+Item3=pto, pto, BYTE,0(0,255), 0,1
+Item4=dev, dev, BYTE,0(0,255), 0,1
+[DIG lock ctrl config1]
+Key=LOCKYK
+ShowMode=2
+Sum=2
+Item1=YKID, CTRL ID, WORD,0(0,65535), 0,1
+Item2=YKTAG, CTRL tag, STRING,0(0,80), 0,1
+[DIG lock ctrl config2]
+Key=YXOFLOCKYK
+ShowMode=2
+Sum=2
+Item1=YKID, CTRL ID, WORD,0(0,65535), 0,1
+Item2=YXTAG, CTRL tag, STRING,0(0,80), 0,1
+[Double Data source switching]
+Key=DEV_SWITCH
+ShowMode=2
+Sum=5
+Item1=YXtag, DIG tag, STRING,0(0,80), 0,1
+Item2=CPU, CPU ID, BYTE,1(1,255), 0,1
+Item3=PTO, Protocol ID, BYTE,1(1,255), 0,1
+Item4=DEV, Dev ID, BYTE,1(1,255), 0,1
+Item5=GrpTag, Group ID, WORD,1(1,65535), 0,1
+[Pow information]
+Key=POW
+ShowMode=2
+Sum=10
+Item1=cpu, CPU ID, BYTE,1(1,255), 0,1
+Item2=pto, Protocol ID, BYTE,1(1,255), 0,1
+Item3=dev, Dev ID, BYTE,1(1,255), 0,1
+Item4=内部组号, Group, BYTE,96(0,255), 1,1
+Item5=内部条目号, Entry, BYTE,0(0,255), 2,1
+Item6=RTUID, RTUID, BYTE,0(0,255), 0,1
+Item7=转换系数, Ratio, REAL,1(0,2048), 0{},1
+Item8=偏移, Offset, REAL,0(-65535,65535), 0{},1
+Item9=POINTID, Point ID, WORD,0(0,65535), 0,1
+Item10=描述, Desc, STRING,Undefine(0,100), -1,1
+[CTRL AND DUALCTRL]
+Key=CTRL_AND_DUALCTRL
+ShowMode=2
+Sum=4
+Item1=ykID, CTRL ID, STRING,0(0,80), 0,1
+Item2=ykId1, CTRL ID1, STRING,0(0,80), 0,1
+Item3=ykId2, CTRL ID2, STRING,0(0,80), 0,1
+Item4=yxId, DIG ID, STRING,0(0,80), 0,1

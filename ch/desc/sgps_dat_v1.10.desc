@@ -1,0 +1,12 @@
+[base]
+code = ascii
+name = GPS通信协议
+doc version = v1.10
+tool = 1326 config tool
+tool version = v1.10
+last modified datetime = 2007-1-9 14:27
+
+[DEV]
+关键字=ascii
+显示方式=2
+数目=0

@@ -1,0 +1,41 @@
+[base]
+code = qqwe,2014-10-23 16:40:11,sifang,,从规约点表中手工形成,,0,,00000000,0
+name = 61850接入规约
+doc version = v1.40
+tool = 1326 config tool
+tool version = v1.10
+last modified datetime = 2007-1-9 14:27
+
+DIG=内部组号,内部条目号,Type,61850编号,数据类型,sfaddr,YxType,描述
+ANA=内部组号,内部条目号,Ratio1,死区1,61850编号,数据类型,sfaddr,Min,Max,Unit,描述
+CTRL=内部组号,内部条目号,61850编号,是否直控,数据类型,sfaddr,描述
+RELA_DIG_CTRL=GROUP,ENTRY,YX_GROUP,YX_ENTRY,描述
+SET=内部组号,内部条目号,Cpu号/定值表号,定值区号
+ZONE=内部组号,内部条目号,Cpu号/定值表号,定值区号
+SET_ELEMENT=GROUP,CPU,ZONE,NO,TYPE,MIN/KGBits,MAX,STEP,精度n,精度m,变比系数,备用,UNIT,描述
+KG_SETs=Group,Entry,Cpu,Zone,BitSeqs,Desc
+EVENT=内部组号,内部条目号,61850编号,对应遥信内部组号,对应遥信内部条目号,61850编号,数据类型,描述
+FAULT_PARA=GROUP,ENTRY,CPU,103组号,103条目号,ParaType,DataType,MIN,MAX,STEP,精度n,精度m,UNIT,描述
+SETPOINT=内部组号,内部条目号,61850编号,是否直控,数据类型,sfaddr,IP,描述
+COMMON=OSC_FILE_LIST
+DEV_PARA=GROUP,CPU,ZONE,NO,TYPE,MIN/KGBits,MAX,STEP,精度n,精度m,变比系数,备用,UNIT,描述
+[DIG]
+16,1,0,0,BOOLEAN,0,0,
+16,2,0,0,BOOLEAN,0,0,
+16,3,0,0,BOOLEAN,0,0,
+16,4,0,0,BOOLEAN,0,0,
+16,5,0,0,BOOLEAN,0,0,
+16,1,0,0,BOOLEAN,0,0,
+[ANA]
+[CTRL]
+[RELA_DIG_CTRL]
+[SET]
+[ZONE]
+[SET_ELEMENT]
+[KG_SETs]
+[EVENT]
+[FAULT_PARA]
+[SETPOINT]
+[COMMON]
+OSC_FILE_LIST=30
+[DEV_PARA]

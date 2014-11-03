@@ -1,0 +1,60 @@
+[base]
+code = ascii
+name = 61850接入规约
+doc version = v1.20
+tool = 1326 config tool
+tool version = v1.10
+last modified datetime = 2007-1-9 14:27
+
+[Dev information]
+关键字=ADDRESS
+显示方式=2
+数目=10
+项目1=内部规约地址, Protocol address, BYTE,1(0,255), 0,0
+项目2=服务器号, Server no, WORD,0(0,65535), 0,1
+项目3=装置模板名称, Dev template name, STRING,0(0,500), 0,0
+项目4=装置地址1, Dev address 1, STRING,0.0.0.0(7,20), 0,1
+项目5=装置地址2, Dev address 2, STRING,0.0.0.0(7,20), 0,1
+项目6=IsREC, Is record, BOOL,0, 0,1
+项目7=RecFileNameMode, record file name mode, ENUM,0(0:Normal format,1:Non-normal format), 0,1
+项目8=备用2, Reserve2, BYTE,0(0,255), 0,1
+项目9=备用3, Reserve3, BYTE,0(0,255), 0,1
+项目10=备用4, Reserve4, BYTE,0(0,255), 0,1
+[Common information]
+关键字=COMMON
+显示方式=1
+数目=8
+项目1=DEBUG, Debug, ENUM,0(0:unable,1:enable), 0,1
+项目2=SET_CLOCK, Set clock, ENUM,0(0:No,1:Yes), 0,1
+项目3=DATA_SYNC(M), Data sync(M), WORD,10(0,65535), 0,1
+项目4=SYN_OFFSET, SYN_OFFSET, WORD,2(0,65535), 0,1
+项目5=FAULT_ENABLE, Fault enable, ENUM,0(0:No,1:Yes), 0,1
+项目6=OSC_FILE_LIST_NUM, File list num, WORD,30(0,65535), 0,1
+项目7=OSC_FILE_CALL_OVERTIME(M), file call overtime(M), WORD,10(0,65535), 0,1
+项目8=LIST_FROM_MODEL_ENABLE, List from model enable, BOOL,0, 0,1
+[Protocl desc information]
+关键字=m61850
+显示方式=1
+数目=16
+项目1=SNTP_CLIENT_ENABLE, SNTP client enable, BOOL,0, 0,1
+项目2=SNTP_SERVER_ENABLE, SNTP server enable, BOOL,0, 0,1
+项目3=SNTP_SEND_INTERVAL(S), SNTP send interval(S), INT,603(603,65535), 0,1
+项目4=SNTP_RECV_INTERVAL(S), SNTP recv interval(s), INT,62(62,65535), 0,1
+项目5=TIME_ZONE_OFFSET(M), Timezone, INT,480(-65535,65535), 0,1
+项目6=AREA_CHOICE, Get file name from src file name, BOOL,1, 0,1
+项目7=PROGCTRL_ENABLE, Sequential ctrl enabel, ENUM,0(1:Enable,0:Unable), 0,1
+项目8=BR_ENABLE, BR enable, BOOL,0, 0,1
+项目9=BRMAX, BR max, INT,30(0,65535), 0,1
+项目10=INIT_CALL_OSC_FILE_LIST, Whether the call was recorded wave after initialization, BOOL,0, 0,1
+项目11=CALL_LUBO_ZONE, Receive only recently how many months of recorded wave(0 means no limit), INT,12(0,120), 0,1
+项目12=MAX_RCV_LUBO_SIZE(M), Limit the size of the call recorded wave(M 0 means no limit), BYTE,0(0,255), 0,1
+项目13=NW_REC_FILE_FILTER, CSPG recorded wave filter manually recorded wave, BOOL,0, 0,1
+项目14=LIST_CALL_INTERVAL(M), Wave recording interval timer calls(M), WORD,30(0,65535), 0,1
+项目15=MODEL_CHECK_TYPE, Model check type, ENUM,0(0:Conventional detection mechanism， strict detection fails to exit the program,1:Loose detection mechanism detects the failure， the alarm is given， the program continues to run,2:Not detected， the initialization is not detected by the application to decide the timing of detection), 0,1
+项目16=REC_OSC_FILE_READ_MODE, Fault record mode, ENUM,1(1:Real-time call,2:Failure to call filtering mode,3:Passive mode call), 0,1
+[SNTP reomte ip]
+关键字=SNTP_REMOTE_IP
+显示方式=2
+数目=2
+项目1=序号, No, BYTE,1(1,254), 0,1
+项目2=IP, Remote IP, STRING,192.168.1.199(1,24), 0,1

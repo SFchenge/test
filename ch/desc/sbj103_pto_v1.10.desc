@@ -1,0 +1,79 @@
+[base]
+code = ascii
+name = 北京供电局103转出规约
+doc version = v1.20
+tool = 1326 config tool
+tool version = v1.10
+last modified datetime = 2007-1-9 14:27
+
+[装置基本信息]
+关键字=DEV
+显示方式=2
+数目=8
+项目1=DevID, 装置ID, BYTE,1(0,255), 0,0
+项目2=CpuIDSrc, 来自接入插件号, BYTE,1(0,255), 0,0
+项目3=PtoIDSrc, 来自接入规约号, BYTE,1(0,255), 0,0
+项目4=DevIDSrc, 来自接入装置号, BYTE,1(0,255), 0,0
+项目5=模板名, 模板名, STRING,CSC101A(0,50), 0,1
+项目6=LinkAddr, 链路地址, BYTE,1(0,255), 0,1
+项目7=Type, 装置类型信息(1表示网络存储器), BYTE,0(0,100), 0,1
+项目8=装置描述, 装置的具体描述信息, STRING,0(0,50), 0,1
+[公共字段信息]
+关键字=COMMON
+显示方式=1
+数目=3
+项目1=DEBUG, 调试状态, ENUM,0(0:不启用,1:启用), 0,1
+项目2=SET_CLOCK, 是否需要对时, ENUM,1(0:不,1:是), 0,1
+项目3=FAULT_SAVE_TIME, 故障信息入库周期, BYTE,5(0,30), 0,1
+[规约字段信息]
+关键字=sBJ103
+显示方式=1
+数目=10
+项目1=PROTOCOL_STANDARD, 规约标准, ENUM,0(0:北供), 0,1
+项目2=FRAME_INTERVAL_MS, 帧间隔时间(预留), WORD,500(0,65535), 0,1
+项目3=ASDU12_REPORT_OVERTIME, ASDU12故障简报上送超时时间(单位:min), WORD,10(0,65535), 0,1
+项目4=SET_AUTO_CALL_INTERVAL, 定值自动召唤时间间隔(单位:min), WORD,0(0,65535), 0,1
+项目5=INTELLIGENT_INF_FILTRATION, (预留), STRING,0(0,50), 0,1
+项目6=CONFIG_FILES_WATCH, 配置文件上送变化信息的启动标记, ENUM,1(0:不启用,1:启用), 0,1
+项目7=HIS_DATA_NET_SAVE_IP, 网络存储设备的IP或CPU, STRING,CPU(0,20), 0,1
+项目8=HIS_DATA_NET_SAVE_PATH, 目标存储设备的路径, STRING,/tffs0a/HisFile/(0,50), 0,1
+项目9=HIS_DATA_NET_SAVE_USER, 目标存储设备登陆的用户名, STRING,target(0,20), 0,1
+项目10=HIS_DATA_NET_SAVE_PWD, 目标存储设备登陆的密码, STRING,12345678(0,20), 0,1
+[子站信息组标题配置信息]
+关键字=SLAVE_TITLE
+显示方式=2
+数目=3
+项目1=CharacStr, 特征字符串, ENUM,0(0:装置配置,1:线路配置,2:定值,3:定值区号,4:模拟量,5:状态量,6:软压板,7:硬压板,8:设置信息,9:操作信息,10:厂商专用信息), 0,1
+项目2=Start, 起始组号, BYTE,0(0,255), 0,1
+项目3=End, 终止组号, BYTE,0(0,255), 0,1
+[装置配置信息]
+关键字=DEV_CONFIG
+显示方式=2
+数目=9
+项目1=DevID, 装置编号, BYTE,1(0,255), 0,1
+项目2=LineID, 装置所属线路编号, BYTE,0(0,255), 0,1
+项目3=Type, 装置类型编号, ENUM,1(0:子站,1:继电保护装置,2:故障录波器,3:测控装置,4:安全自动装置,5:一般IED装置), 0,1
+项目4=RunState, 运行状态, ENUM,1(0:停用,1:运行,2:调试中,3:检修,4:未定义), 0,1
+项目5=CpuNum, 装置CPU数目, BYTE,1(1,255), 0,1
+项目6=DevName, 装置厂家定义型号, STRING,0(0,48), 0,1
+项目7=CpuId, CPU编号, BYTE,0(0,255), 0,1
+项目8=CPUName, CPU描述, STRING,CPU(0,14), 0,1
+项目9=CpuVersion, CPU版本号, STRING,V1.00(0,14), 0,1
+[线路配置]
+关键字=LINE_CONFIG
+显示方式=2
+数目=14
+项目1=LineNo, 线路编号, WORD,0(0,65535), 0,1
+项目2=RunState, 运行状态, ENUM,0(0:停用,1:运行,2:调试中,3:未定义), 0,1
+项目3=LineSWNo, 线路开关编号, WORD,0(0,65535), 0,1
+项目4=LineVolGrade, 线路电压等级(Kv), WORD,0(0,65535), 0,1
+项目5=LineLen, 线路长度(Km), REAL,0(0,100000), 0,1
+项目6=ZhengXuDz, 单位正序电阻(Ω), REAL,0(0,0), 0,1
+项目7=ZhengXuDk, 单位正序电抗(Ω), REAL,0(0,0), 0,1
+项目8=LingXuDz, 单位零序电阻(Ω), REAL,0(0,0), 0,1
+项目9=LingXuDk, 单位零序电抗(Ω), REAL,0(0,0), 0,1
+项目10=ZhengXuRk, 正序容抗(Ω), REAL,0(0,0), 0,1
+项目11=LingXuRk, 零序容抗(Ω), REAL,0(0,0), 0,1
+项目12=CTRatio, CT变比, REAL,0(0,0), 0,1
+项目13=SecondI, 二次侧最大负荷电流, ENUM,1(1:1A,5:5A), 0,1
+项目14=Name, 线路名称, STRING,(0,50), 0,1

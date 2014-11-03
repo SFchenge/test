@@ -1,0 +1,39 @@
+[base]
+code = ascii 	         	    
+name = serpb
+tool=1326 config tool
+tool version = V1.10bata
+doc version=V1.20
+last modified datetime =2007-5-31 09:27
+
+[WATCHDOG]
+Key=WATCHDOG
+ShowMode=1
+Sum=1
+Item1=WATCHDOGEN,Start watchdog,ENUM,1(0:OFF,1:ON)
+[TIME ZONE]
+Key=TIMEZONE
+ShowMode=2
+Sum=2
+Item1=offset(minutes),offset(minutes),INT,480(-720,720)
+Item2=zonename,zone name,STRING,beijing(0,30)
+[DebugRunInfo]
+Key=RUN
+ShowMode=1
+Sum=1
+Item1=DEBUG_EN,Enable debug,ENUM,1(0:NO,1:Yes)
+[Import Device By Chn]
+Key=DEV_BY_CHN
+ShowMode=1
+Sum=1
+Item1=DEV_BY_CHN_EN,DEV_BY_CHN Enable,ENUM,0(0:NO,1:Yes)
+[Print Language]
+Key=LANGUAGE
+ShowMode=1
+Sum=1
+Item1=LanguageEN,Select language,ENUM,0(0:English,1:Chinese)
+[NFS Cancel Shared Directory]
+Key=NFS
+ShowMode=1
+Sum=1
+Item1=NFS_DISEN,Disable or Enable,ENUM,0(0:NO,1:Yes)

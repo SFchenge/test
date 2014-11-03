@@ -1,0 +1,40 @@
+[base]
+code = ascii
+name = 中元录波器接入
+doc version = v1.20
+tool = 1326 config tool
+tool version = v1.10
+last modified datetime = 2007-1-9 14:27
+
+[装置信息]
+关键字=ADDRESS
+显示方式=2
+数目=4
+项目1=内部规约地址, 内部规约地址, BYTE,1(0,255), 0,0
+项目2=规约地址, 规约地址(H), BYTE_HEX,1(0,ff), 0,1
+项目3=装置模板名称, 装置模板名称, STRING,mZH2(0,50), 0,0
+项目4=装置IP地址, 装置IP地址, STRING,192.168.1.201(1,16), 0,1
+[公共字段信息]
+关键字=COMMON
+显示方式=1
+数目=9
+项目1=DEBUG, 调试状态, ENUM,0(0:不启用,1:启用), 0,1
+项目2=SET_CLOCK, 是否需要对时, ENUM,0(0:不,1:是), 0,1
+项目3=DATA_SYNC(M), 数据同步时间(分钟), WORD,10(0,65535), 0,1
+项目4=SYN_OFFSET, SYN_OFFSET, WORD,2(0,65535), 0,1
+项目5=FAULT_ENABLE, 是否支持录波, ENUM,1(0:不,1:是), 0,1
+项目6=OSC_FILE_LIST_NUM, 文件列表长度, WORD,100(0,500), 0,1
+项目7=OSC_FILE_CALL_OVERTIME(M), 召唤文件超时时间(分钟), WORD,10(0,65535), 0,1
+项目8=OSC_FILE_ADD_POINT, 录波文件是否补点, ENUM,0(0:不,1:是), 0,1
+项目9=CTRL_ENABLE, 是否支持遥控(投退压板/修改定值/切换定值区), ENUM,1(0:不,1:是), 0,1
+[规约字段信息]
+关键字=mzh2
+显示方式=1
+数目=7
+项目1=FRAME_INTERVAL(MS), 帧间隔(毫秒), WORD,600(0,65535), 0,1
+项目2=FRAME_OVERTIME(MS), 帧超时时间(毫秒), WORD,1000(0,65535), 0,1
+项目3=ANA_INTERVAL(M), 模拟量召唤时间(分钟), WORD,0(0,20), 0,1
+项目4=ZH2_FRAME_INTERVAL_MS, 录波器帧间隙超时时间, WORD,30000(0,30000), 0,1
+项目5=ZH2_FRAME_BYTE_NUM, 录波器帧内容最大字节, WORD,4096(0,10240), 0,1
+项目6=DEV_TYPE, 装置类型, ENUM,0(0:中元ZH装置,1:哈尔滨国力电气FGL装置,2:其他), 0,1
+项目7=CALL_LUBO_TIME, 记录录波的起始时间, STRING,2010-12-20-16-57(0,50), 0,1

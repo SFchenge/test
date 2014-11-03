@@ -1,0 +1,35 @@
+[base]
+code = ascii
+name = JKWF五防规约
+doc version = v1.10
+tool = 1326 config tool
+tool version = v1.10
+last modified datetime =  2007-1-9 14:27
+
+[公共字段信息]
+关键字=COMMON
+显示方式=1
+数目=12
+项目1=DEBUG, 调试状态, ENUM,0(0:不启用,1:启用), 0,1
+项目2=SET_CLOCK, 是否需要对时, ENUM,0(0:不,1:是), 0,1
+项目3=PA_FRZ_INTERVAL, 脉冲量冻结周期（分钟）, WORD,3(0,65535), 255,1
+项目4=ANASAVE_TIME, 遥测自动存储时间间隔（分钟）, WORD,0(0,65535), 0,1
+项目5=RECORD_DIR, 模拟量存储目录, STRING,ANA_SAVE(0,500), 255,1
+项目6=ADJUST_CLOCK, 是否调整时钟, ENUM,1(0:不,1:是), 0,1
+项目7=BAUD_RATE, 通信波特率, ENUM,600(300:300,600:600,1200:1200,2400:2400,4800:4800,9600:9600,19200:19200), 0,1
+项目8=CHECK_MODE, 校验方式, ENUM,0(0:无校验,1:奇校验,2:偶校验), 0,1
+项目9=PREPARE_TIME, 数据准备时间（秒）, WORD,90(0,65535), 0,1
+项目10=LOCK_DIG_ID, 闭锁主站遥控的遥信点ID(规约点表范围内五字节内部ID), STRING,0H(0,500), 255,1
+项目11=SOE_FILT_TIME, 保留soe的时间（秒），0表示不保留, INT,0(0,360000), 0,1
+项目12=SWITCH_LOCK_DIG_SERIAL, 闭锁主站遥控的把手ID(五字节内部ID), STRING,0H(0,500), 255,1
+[规约信息]
+关键字=sjkwf
+显示方式=1
+数目=1
+项目1=STANDARD, 适用标准, ENUM,0(0:四方监控五防（通用版本V2或WIZCON）), 255,1
+[RTU字段信息]
+关键字=RTU
+显示方式=2
+数目=2
+项目1=RTUID, RTUID, BYTE,0(0,255), 0,1
+项目2=RTU链路地址, RTU链路地址(H), WORD_HEX,1(0,ffff), 0,1

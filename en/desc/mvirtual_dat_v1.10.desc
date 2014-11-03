@@ -1,0 +1,48 @@
+[base]
+code = ascii
+name = Ðé×°ÖÃ¹æÔ¼
+doc version = V1.20
+tool = 1326 config tool
+tool version = V1.10bata
+last modified datetime = 2007-1-9 14:27
+
+[DIG]
+Key=DIG
+ShowMode=2
+Sum=5
+Item1=GROUP, BUS GROUP, BYTE,16(0,255), 0,1
+Item2=ENTRY, BUS ENTRY, BYTE,0(0,255), 0,1
+Item3=CSC2000 dig TagName, CSC2000 dig TagName, STRING,DIG010101(0,80), 0,1
+Item4=YxType, DIG TYPE, ENUM,0(0:BINARY,1:EVENT,2:STRAP,3:HARD,4:WARNING,5:COMM_STATE,6:CHECK), 0,1
+Item5=description, description, STRING,(0,50), 0,1
+
+[ANA]
+Key=ANA
+ShowMode=2
+Sum=9
+Item1=GROUP, bus group, BYTE,64(0,255), 0,1
+Item2=ENTRY, bus entry, BYTE,0(0,255), 0,1
+Item3=Ratio1, Ratio, REAL,1(0,100), 0,1
+Item4=dead band, dead band, REAL,0.001(0,100), 0,1
+Item5=CSC2000 ANA TagName, CSC2000 ANA TagName, STRING,0000(0,80), 0,1
+Item6=Min, Min, REAL,0(0,100), 0,0
+Item7=Max, Max, REAL,65535(0,65535), 0,0
+Item8=Unit, Unit, STRING,V(0,5), 0,0
+Item9=description, description, STRING,Not defined(0,50), 0,0
+
+[SETTING PARA]
+Key=SET_ELEMENT
+ShowMode=2
+Sum=12
+Item1=GROUP, GROUP, BYTE,144(0,255), 0,1
+Item2=CPU, CPU, BYTE,1(0,255), 0,1
+Item3=ZONE, ZONE, BYTE,16(0,255), 0,1
+Item4=NO, NO, BYTE,1(0,255), 0,1
+Item5=TYPE, type, ENUM,1(0:float,1:integer,2:ctrl word,3:description), 0,1
+Item6=MIN/KGBits, MIN, REAL,0(0,100), 0,1
+Item7=MAX, MAX, REAL,0(0,65535), 0,1
+Item8=STEP, STEP, REAL,0(0,100), 0,1
+Item9=precision_n, precision n, REAL,0(0,100), 0,1
+Item10=precision_m, precision m, REAL,0(0,100), 0,1
+Item11=UNIT, UINT, STRING,(0,5), 0,1
+Item12=DESC, DESCRIPTION, STRING,0(0,50), 0,1

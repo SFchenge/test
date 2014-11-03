@@ -1,0 +1,74 @@
+[base]
+code = ascii 	         	    
+name = ethpb
+tool=1326 config tool
+tool version = V1.10bata
+doc version=V1.20
+last modified datetime =2007-1-9 14:27
+
+[IP ADDRESS]
+Key=LOCALIP
+ShowMode=2
+Sum=3
+Item1=ID,IP Address No,BYTE,1(1,255)
+Item2=IP Address,IP Address,STRING,192.168.1.99(0,15)
+Item3=NETMASK,NETMASK,STRING,0(0,15)
+
+[ROUTE]
+Key=ROUTE
+ShowMode=2
+Sum=4
+Item1=ID,ROUTE NO,BYTE,1(1,255)
+Item2=NETMASK,NETMASK,STRING,255.255.255.0(0,15)
+Item3=gateway ip,gateway ip,STRING,192.168.1.50(0,15)
+Item4=destination,destination ip,STRING,192.168.1.51(0,15)
+
+[WATCHDOG]
+Key=WATCHDOG
+ShowMode=1
+Sum=1
+Item1=WATCHDOGEN,Start watchdog,ENUM,1(0:OFF,1:ON)
+[TIME ZONE]
+Key=TIMEZONE
+ShowMode=2
+Sum=2
+Item1=offset(minutes),offset(minutes),INT,480(-720,720)
+Item2=zonename,zone name,STRING,beijing(0,30)
+[DebugRunInfo]
+Key=RUN
+ShowMode=1
+Sum=1
+Item1=DEBUG_EN,Enable debug,ENUM,1(0:NO,1:Yes)
+[Import Device By Chn]
+Key=DEV_BY_CHN
+ShowMode=1
+Sum=1
+Item1=DEV_BY_CHN_EN,DEV_BY_CHN Enable,ENUM,0(0:NO,1:Yes)
+[Print Language]
+Key=LANGUAGE
+ShowMode=1
+Sum=1
+Item1=LanguageEN,Select language,ENUM,0(0:English,1:Chinese)
+[NFS Cancel Shared Directory]
+Key=NFS
+ShowMode=1
+Sum=1
+Item1=NFS_DISEN,Disable or Enable,ENUM,0(0:NO,1:Yes)
+[MTU VALUE]
+Key=MTU
+ShowMode=1
+Sum=1
+Item1=MTU Value,MTU Value, WORD,1500(0,65535)
+[SNTP Server]
+Key=SNTP
+ShowMode=1
+Sum=3
+Item1=SYNC_SNTP_MODE_SERVICE,SNTP RunMode,ENUM,3(3:received time,4:Timing Source)
+Item2=SYNC_SNTPS_MODE,SNTP TimingMode,ENUM,1(1:Active,2:Passive)
+Item3=SYNC_SNTP_INTERVAL,Time Period(sec), WORD,3600(1,65535)
+[SNTP ServerIP]
+Key=SNTP_IP
+ShowMode=2
+Sum=2
+Item1=ID,IP Address No,BYTE,1(1,255)
+Item2=IP Address,IP Address,STRING,192.168.1.99(0,15)

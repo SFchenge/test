@@ -1,0 +1,172 @@
+[base]
+code = ascii
+name = 标准串口103接入规约
+doc version = V1.20
+tool = 1326 config tool
+tool version = V1.10bata
+last modified datetime = 2007-1-9 14:27
+
+[DIG]
+关键字=DIG
+显示方式=2
+数目=11
+项目1=GROUP, BUS GROUP, BYTE,16(0,255), 0,1
+项目2=ENTRY, BUS ENTRY, BYTE,0(0,255), 0,1
+项目3=OFFSET, ASDU ADDR OFFSET, BYTE,0(0,8), 0,1
+项目4=FUN, FUN, BYTE,0(0,255), 0,1
+项目5=INF, INF, BYTE,0(0,255), 0,1
+项目6=SOE TAG, SOE TAG, ENUM,1(0:Digital,1:SOE), 0,1
+项目7=s10/11 TAG, ALL EVENT/WARNING, ENUM,0(0:no,1:allevent,2:allwarning), 0,1
+项目8=reset mode, reset mode, ENUM,0(0:disable,1:auto,2:scada), 0,1
+项目9=EVENT ENABLE, EVENT ENABLE, ENUM,0(0:flag 0,1:flag 1,2:flag 2), 0,1
+项目10=YxType, DIG TYPE, ENUM,0(0:BINARY,1:EVENT,2:STRAP,3:HARD,4:WARNING,5:COMM_STATE,6:CHECK,7:START EVENT,8:ACT EVENT,9:RECLOSE EVENT,10:RESET EVENT), 0,1
+项目11=description, description, STRING,undefined(0,50), 0,1
+[ANA]
+关键字=ANA
+显示方式=2
+数目=11
+项目1=GROUP, bus group, BYTE,64(0,255), 0,1
+项目2=ENTRY, bus entry, BYTE,0(0,255), 0,1
+项目3=Ratio1, Ratio, REAL,1(0,100), 0,1
+项目4=dead band, dead band, REAL,0.001(0,100), 0,1
+项目5=offset, ASDU ADDR OFFSET, BYTE,0(0,8), 0,1
+项目6=Group103, Group 103, BYTE,0(0,255), 0,1
+项目7=Entry103, Entry 103, BYTE,0(0,255), 0,1
+项目8=Min, Min, REAL,0(0,100), 0,1
+项目9=Max, Max, REAL,0(0,65535), 0,1
+项目10=Unit, Unit, STRING,V(0,5), 0,1
+项目11=desc, desc, STRING,0(0,50), 0,1
+[CTRL]
+关键字=CTRL
+显示方式=2
+数目=6
+项目1=GROUP, bus group, BYTE,128(0,255), 0,1
+项目2=ENTRY, bus entry, BYTE,0(0,255), 0,1
+项目3=offset, ASDU ADDR OFFSET, BYTE,0(0,8), 0,1
+项目4=Group103, Group 103, BYTE,0(0,255), 0,1
+项目5=Entry103, Entry 103, BYTE,0(0,255), 0,1
+项目6=desc, desc, STRING,0(0,50), 0,1
+[SETTING]
+关键字=SET
+显示方式=2
+数目=5
+项目1=GROUP, bus group, BYTE,144(0,255), 0,1
+项目2=ENTRY, bus entry, BYTE,0(0,255), 0,1
+项目3=offset, ASDU ADDR OFFSET, BYTE,0(0,8), 0,1
+项目4=Group103, Group 103, BYTE,0(0,255), 0,1
+项目5=Entry103, Entry 103, BYTE,0(0,255), 0,1
+[SETTING ZONE]
+关键字=ZONE
+显示方式=2
+数目=5
+项目1=GROUP, bus group, BYTE,208(0,255), 0,1
+项目2=ENTRY, bus entry, BYTE,0(0,255), 0,1
+项目3=offset, ASDU ADDR OFFSET, BYTE,0(0,8), 0,1
+项目4=Group103, Group 103, BYTE,0(0,255), 0,1
+项目5=Entry103, Entry 103, BYTE,0(0,255), 0,1
+[SETTING PARA]
+关键字=SET_ELEMENT
+显示方式=2
+数目=12
+项目1=GROUP, GROUP, BYTE,144(0,255), 0,1
+项目2=CPU, CPU, BYTE,1(0,255), 0,1
+项目3=ZONE, ZONE, BYTE,16(0,255), 0,1
+项目4=NO, NO, BYTE,1(0,255), 0,1
+项目5=TYPE, type, ENUM,1(0:float,1:integer,2:ctrl word,3:description), 0,1
+项目6=MIN/KGBits, MIN, REAL,0(0,100), 0,1
+项目7=MAX, MAX, REAL,0(0,65535), 0,1
+项目8=STEP, STEP, REAL,0(0,100), 0,1
+项目9=precision_n, precision n, REAL,0(0,100), 0,1
+项目10=precision_m, precision m, REAL,0(0,100), 0,1
+项目11=UNIT, UINT, STRING,(0,5), 0,1
+项目12=DESC, DESCRIPTION, STRING,0(0,50), 0,1
+[OSC Digital]
+关键字=DI_CHANGE
+显示方式=2
+数目=4
+项目1=Fun, Fun, BYTE,192(0,255), 0,1
+项目2=Inf, Inf, BYTE,0(0,255), 0,1
+项目3=APPID, ASDU ADDR OFFSET, BYTE,0(0,8), 0,1
+项目4=ChannelId, description, STRING,undefined(0,50), 0,1
+[OSC Analog]
+关键字=ACC
+显示方式=2
+数目=6
+项目1=AccNo, Channel no, BYTE,1(0,255), 0,1
+项目2=offset, ASDU ADDR OFFSET, BYTE,0(0,100), 0,1
+项目3=name, Channel name, STRING,Ia(0,500), 0,1
+项目4=phase, phase, STRING,A(0,50), 0,1
+项目5=component, component, STRING,0(0,50), 0,1
+项目6=UINT, UINT, ENUM,other(kV:kV,V:V,kA:kA,A:A,other:other,Ie:Ie,In:In,Un:Un,Ue:Ue), 0,1
+[CTRL WORD]
+关键字=KG_SETs
+显示方式=2
+数目=6
+项目1=GROUP, bus group, BYTE,144(0,254), 0,1
+项目2=ENTRY, bus entry, BYTE,0(0,255), 0,1
+项目3=Cpu, CPU NO, BYTE,0(0,255), 0,1
+项目4=Zone, Zone NO, BYTE,0(0,255), 0,1
+项目5=BitSeqs, Bit sequence, BYTE,0(0,15), 0,1
+项目6=Desc, DESCRIPTION, STRING,(0,50), 0,1
+[SOFT STRAP]
+关键字=SOFT_CNT_INFO
+显示方式=2
+数目=3
+项目1=CPU, CPU NO, BYTE,1(0,255), 0,1
+项目2=GROUP, Strap group, BYTE,14(0,255), 0,1
+项目3=offset, ASDU ADDR OFFSET, BYTE,0(0,8), 0,1
+[POW]
+关键字=POW
+显示方式=2
+数目=6
+项目1=GROUP, bus group, BYTE,96(0,255), 0,1
+项目2=ENTRY, bus entry, BYTE,0(0,255), 0,1
+项目3=offset, ASDU ADDR OFFSET, BYTE,0(0,8), 0,1
+项目4=Group103, Group 103, BYTE,0(0,255), 0,1
+项目5=Entry103, Entry 103, BYTE,0(0,255), 0,1
+项目6=desc, DESCRIPTION, STRING,0(0,50), 0,1
+[XUJI FAULT PARA]
+关键字=XUJI_FAULT_TYPE
+显示方式=2
+数目=7
+项目1=offset, ASDU ADDR OFFSET, BYTE,0(0,8), 0,1
+项目2=Group103, Group 103, BYTE,0(0,255), 0,1
+项目3=Entry103, Entry 103, BYTE,0(0,255), 0,1
+项目4=backup, backup, BYTE,0(0,255), 0,1
+项目5=ParaId, Para ID<start from1>, BYTE,1(0,255), 0,1
+项目6=type, type, BYTE,1(0,255), 0,1
+项目7=desc, DESCRIPTION, STRING,undefined(0,50), 0,1
+[ActReport Group]
+关键字=ASDU10_REPORT_INF
+显示方式=2
+数目=2
+项目1=index, type no, ENUM,10(10:Nari,11:Nanzi PS,12:Nanzi SG,1:event with para,2:input status while start,3:strap status while start,4:input change after start,5:fault para), 0,1
+项目2=group, Group<H>, BYTE_HEX,a(0,ff), 0,1
+[Device type]
+关键字=DEV_TYPE_SELECT
+显示方式=1
+数目=1
+项目1=DEV_TYPE, Device type, ENUM,0(0:other,1:Nanzi,2:sifang,3:Xuji), 0,1
+[Event]
+关键字=EVENT
+显示方式=2
+数目=7
+项目1=GROUP, bus group, BYTE,176(0,255), 0,1
+项目2=ENTRY, bus entry, BYTE,0(0,255), 0,1
+项目3=CPU, CPU no, BYTE,1(0,255), 0,1
+项目4=FUN, Fun, BYTE,0(0,255), 0,1
+项目5=INF, Inf, BYTE,0(0,255), 0,1
+项目6=TRIGGER, Is Trigger, BOOL,1, 0,1
+项目7=desc, DESCRIPTION, STRING,Event(0,50), 0,1
+[Fault para]
+关键字=FAULT_PARA
+显示方式=2
+数目=8
+项目1=GROUP, Group, BYTE,224(0,255), 0,1
+项目2=ENTRY, Entry, BYTE,1(0,255), 0,1
+项目3=CPU, CPU no, BYTE,1(0,255), 0,1
+项目4=ParaType, Para type, WORD_HEX,0(0,65535), 0,1
+项目5=precision_n, precision n, REAL,0(0,100), 0,1
+项目6=precision_m, precision m, REAL,0(0,100), 0,1
+项目7=UNIT, UNIT, STRING,0(0,10), 0,1
+项目8=desc, DESCRIPTION, STRING,0(0,50), 0,1

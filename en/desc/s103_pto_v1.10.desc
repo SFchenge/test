@@ -1,0 +1,135 @@
+[base]
+code = ascii
+name = 浙江电网103转出规约
+doc version = v1.20
+tool = 1326 config tool
+tool version = v1.10
+last modified datetime = 2007-1-9 14:27
+
+[装置基本信息]
+关键字=DEV
+显示方式=2
+数目=9
+项目1=DevID, 装置ID, BYTE,1(0,255), 0,0
+项目2=CpuIDSrc, 来自接入插件号, BYTE,1(0,255), 0,0
+项目3=PtoIDSrc, 来自接入规约号, BYTE,1(0,255), 0,0
+项目4=DevIDSrc, 来自接入装置号, BYTE,1(0,255), 0,0
+项目5=模板名, 模板名, STRING,CSC101A(0,50), 0,1
+项目6=LinkAddr, 链路地址, BYTE,1(0,255), 0,1
+项目7=IsOscDev, 是否录波设备, BOOL,0, 0,1
+项目8=ParaTypeNo, 参数类型表号, BYTE,0(0,50), 0,1
+项目9=装置描述, 装置的具体描述信息, STRING,0(0,50), 0,1
+[公共字段信息]
+关键字=COMMON
+显示方式=1
+数目=2
+项目1=DEBUG, 调试状态, ENUM,0(0:不启用,1:启用), 0,1
+项目2=SET_CLOCK, 是否需要对时, ENUM,1(0:不,1:是), 0,1
+[规约字段信息]
+关键字=s103
+显示方式=1
+数目=5
+项目1=STANDARD, 规约标准, STRING,zhejiang(0,24), 0,1
+项目2=FRAME_INTERVAL_MS, 帧间隔(毫秒), WORD,500(0,65536), 0,1
+项目3=ASDU12_REPORT_OVERTIME, ASDU12故障简报上送超时时间(min), WORD,10(0,65536), 0,1
+项目4=INTELLIGENT_INF_FILTRATION, 智能过滤, BOOL,0, 0,1
+项目5=CONFIG_FILES_WATCH, 配置文件上送变化信息的启动标记, BOOL,0, 0,1
+[子站信息组标题配置信息]
+关键字=SLAVE_TITLE
+显示方式=2
+数目=2
+项目1=slaTitle, 子站信息组标题, STRING,0(0,24), 0,1
+项目2=group, 组号, BYTE,1(0,255), 0,1
+[装置配置信息]
+关键字=DEV_CONFIG
+显示方式=2
+数目=8
+项目1=链路地址, LinkAddr, BYTE,1(0,255), 0,1
+项目2=装置标识, 装置标识, STRING,未知装置(0,255), 0,1
+项目3=装置编号, 装置编号, BYTE,1(0,255), 0,1
+项目4=装置类型编号, 装置类型编号, BYTE,1(0,255), 0,1
+项目5=装置名称, 装置名称, STRING,CSC101A(0,500), 0,1
+项目6=装置所属一次设备编号, 装置所属一次设备编号, STRING,0(0,50), 0,1
+项目7=装置型号, 装置型号, STRING,0(0,50), 0,1
+项目8=装置版本号, 装置版本号, STRING,V1.00(0,50), 0,1
+[线路配置]
+关键字=LINE_CONFIG
+显示方式=2
+数目=14
+项目1=LineNo, 线路编号, WORD,0(0,65536), 0,1
+项目2=RunState, 运行状态, BYTE,1(0,255), 0,1
+项目3=LineSWNo, 线路开关编号, WORD,0(0,65536), 0,1
+项目4=LineVolGrade, 线路电压等级(Kv), WORD,0(0,65536), 0,1
+项目5=LineLen, 线路长度(Km), REAL,0(0,100000), 0,1
+项目6=ZhengXuDz, 单位正序电阻(Ω), REAL,0(0,0), 0,1
+项目7=ZhengXuDk, 单位正序电抗(Ω), REAL,0(0,0), 0,1
+项目8=LingXuDz, 单位零序电阻(Ω), REAL,0(0,0), 0,1
+项目9=LingXuDk, 单位零序电抗(Ω), REAL,0(0,0), 0,1
+项目10=ZhengXuRk, 正序容抗, REAL,0(0,0), 0,1
+项目11=LingXuRk, 零序容抗, REAL,0(0,0), 0,1
+项目12=CTRatio, CT变比, REAL,0(0,0), 0,1
+项目13=SecondI, 二次侧最大负荷电流, ENUM,1(1:1A,5:5A), 0,1
+项目14=Name, 线路名称, STRING,0(0,24), 0,1
+[母线配置]
+关键字=MUXIAN_CONFIG
+显示方式=2
+数目=5
+项目1=BusId, 母线编号, WORD,0(0,65536), 0,1
+项目2=RunState, 运行状态, BYTE,0(0,255), 0,1
+项目3=VolGrade, 母线电压等级(Kv), WORD,0(0,65536), 0,1
+项目4=ConnetMode, 接线方式, BYTE,0(0,255), 0,1
+项目5=Name, 母线名称, STRING,母线(0,50), 0,1
+[开关配置信息]
+关键字=SWITCH_CONFIG
+显示方式=2
+数目=5
+项目1=SwitchID, 开关编号, WORD,0(0,65535), 0,1
+项目2=RunState, 运行状态, BYTE,1(0,255), 0,1
+项目3=VolGrade, 电压等级(Kv), WORD,220(0,65535), 0,1
+项目4=SwiType, 开关类型, BYTE,1(0,255), 0,1
+项目5=Name, 开关名称, STRING,开关(0,50), 0,1
+[变压器配置信息]
+关键字=TRANSFORMER_CONFIG
+显示方式=2
+数目=0
+[电抗器配置]
+关键字=REACTOR_CONFIG
+显示方式=2
+数目=5
+项目1=ID, 电抗器编号, WORD,0(0,65535), 0,1
+项目2=RunState, 运行状态, BYTE,1(0,255), 0,1
+项目3=VolGrade, 电压等级(Kv), WORD,220(0,65535), 0,1
+项目4=Capability, 额定容量(MVar), WORD,0(0,65535), 0,1
+项目5=Name, 电抗器名称, STRING,电抗器(0,50), 0,1
+[电容器配置]
+关键字=CAPACITOR_CONFIG
+显示方式=2
+数目=5
+项目1=ID, 电容器编号, WORD,0(0,65535), 0,1
+项目2=RunState, 运行状态, BYTE,1(0,255), 0,1
+项目3=VolGrade, 电压等级(Kv), WORD,220(0,65535), 0,1
+项目4=Capability, 额定容量(MVar), WORD,0(0,65535), 0,1
+项目5=Name, 电容器名称, STRING,电容器(0,50), 0,1
+[刀闸配置]
+关键字=ascii
+显示方式=2
+数目=5
+项目1=ID, 刀闸编号, WORD,0(0,65535), 0,1
+项目2=Type, 刀闸类型, BYTE,0(0,255), 0,1
+项目3=RunState, 运行状态, BYTE,1(0,255), 0,1
+项目4=VolGrade, 电压等级(Kv), WORD,220(0,65535), 0,1
+项目5=Name, 刀闸名称, STRING,刀闸(0,50), 0,1
+[检修遥信点]
+关键字=YXLOCK
+显示方式=2
+数目=2
+项目1=Index, 序号, BYTE,0(0,255), 0,1
+项目2=YxId, 遥信点内部5字节ID, STRING,101010101(9,10), 0,1
+[遥信闭锁装置信息]
+关键字=YXLOCKINFO
+显示方式=2
+数目=4
+项目1=Index, 序号, BYTE,0(0,255), 0,1
+项目2=CpuId, 装置所属接入插件号, BYTE,1(1,255), 0,1
+项目3=PtoId, 装置所属接入规约号, BYTE,1(1,255), 0,1
+项目4=DevId, 装置在其接入规约中的序号, BYTE,1(1,255), 0,1

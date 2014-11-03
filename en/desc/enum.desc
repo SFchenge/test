@@ -1,0 +1,18 @@
+[base]
+code = ascii
+name = enum
+doc version = V1.20
+tool = 1326 config tool
+tool version = V1.10bata
+last modified datetime = 2007-1-9 14:27
+
+[YX]
+关键字=YX
+显示方式=2
+数目=6
+项目1=0, 开关量, STRING,(0,1024), ,0
+项目2=1, 保护动作信号, STRING,(0,1024), ,0
+项目3=2, 压板状态, STRING,(0,1024), ,0
+项目4=3, 异常告警, STRING,(0,1024), ,0
+项目5=4, 通讯状态, STRING,(0,1024), ,0
+项目6=5, 自检信息, STRING,(0,1024), ,0

@@ -1,0 +1,10 @@
+[m61850]
+DIG=内部组号,内部条目号,Type,61850编号,数据类型,sfaddr,YxType,描述
+ANA=内部组号,内部条目号,Ratio1,死区1,61850编号,数据类型,Min,Max,Unit,描述
+CTRL=内部组号,内部条目号,61850编号,是否直控,数据类型,描述
+EVENT=内部组号,内部条目号,61850编号,对应遥信内部组号,对应遥信内部条目号,61850编号,数据类型,描述
+SET=内部组号,内部条目号,Cpu号/定值表号,定值区号
+ZONE=内部组号,内部条目号,Cpu号/定值表号,定值区号
+SET_ELEMENT=GROUP,CPU,ZONE,NO,TYPE,MIN/KGBits,MAX,STEP,精度n,精度m,变比系数,备用,UNIT,描述
+KG_SETs=Group,Entry,Cpu,Zone,BitSeqs,Desc
+FAULT_PARA=Group,Entry,Cpu,ParaType,精度n,精度m,UNIT,描述

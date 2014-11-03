@@ -1,0 +1,60 @@
+[base]
+code = ascii
+name = 61850接入规约
+doc version = v1.20
+tool = 1326 config tool
+tool version = v1.10
+last modified datetime = 2007-1-9 14:27
+
+[装置信息]
+关键字=ADDRESS
+显示方式=2
+数目=10
+项目1=内部规约地址, 内部规约地址, BYTE,1(0,255), 0,0
+项目2=服务器号, 服务器号, WORD,0(0,65535), 0,1
+项目3=装置模板名称, 装置模板名称, STRING,0(0,500), 0,0
+项目4=装置地址1, 装置地址1, STRING,0.0.0.0(7,20), 0,1
+项目5=装置地址2, 装置地址2, STRING,0.0.0.0(7,20), 0,1
+项目6=IsREC, 是否为录波器设备, BOOL,0, 0,1
+项目7=RecFileNameMode, 录波文件名模式, ENUM,0(0:正常格式,1:非正常格式), 0,1
+项目8=备用2, 备用2, BYTE,0(0,255), 0,1
+项目9=备用3, 备用3, BYTE,0(0,255), 0,1
+项目10=备用4, 备用4, BYTE,0(0,255), 0,1
+[公共字段信息]
+关键字=COMMON
+显示方式=1
+数目=8
+项目1=DEBUG, 调试状态, ENUM,0(0:不启用,1:启用), 0,1
+项目2=SET_CLOCK, 是否需要对时, ENUM,0(0:不,1:是), 0,1
+项目3=DATA_SYNC(M), 数据同步时间(分钟), WORD,10(0,65535), 0,1
+项目4=SYN_OFFSET, SYN_OFFSET, WORD,2(0,65535), 0,1
+项目5=FAULT_ENABLE, 是否支持录波, ENUM,0(0:不,1:是), 0,1
+项目6=OSC_FILE_LIST_NUM, 文件列表长度, WORD,30(0,65535), 0,1
+项目7=OSC_FILE_CALL_OVERTIME(M), 召唤文件超时时间(分钟), WORD,10(0,65535), 0,1
+项目8=LIST_FROM_MODEL_ENABLE, 文件列表长度通过装置模板个性定制, BOOL,0, 0,1
+[规约描述信息]
+关键字=m61850
+显示方式=1
+数目=16
+项目1=SNTP_CLIENT_ENABLE, SNTP客户端使能, BOOL,0, 0,1
+项目2=SNTP_SERVER_ENABLE, SNTP服务端使能, BOOL,0, 0,1
+项目3=SNTP_SEND_INTERVAL(S), 对时发送间隔, INT,603(603,65535), 0,1
+项目4=SNTP_RECV_INTERVAL(S), 对时接受间隔, INT,62(62,65535), 0,1
+项目5=TIME_ZONE_OFFSET(M), 时区, INT,480(-65535,65535), 0,1
+项目6=AREA_CHOICE, 是否从原始文件名中取内部文件名, BOOL,1, 0,1
+项目7=PROGCTRL_ENABLE, 顺控使能, ENUM,0(1:顺控使能,0:顺控关闭), 0,1
+项目8=BR_ENABLE, 是否启动缓存报告, BOOL,0, 0,1
+项目9=BRMAX, 缓存报告最大条目数, INT,30(0,65535), 0,1
+项目10=INIT_CALL_OSC_FILE_LIST, 是否初始化后召唤录波, BOOL,0, 0,1
+项目11=CALL_LUBO_ZONE, 只接收最近多少个月的录波(0表示不限制), INT,12(0,120), 0,1
+项目12=MAX_RCV_LUBO_SIZE(M), 限制召唤录波大小(兆 0表示不限制), BYTE,0(0,255), 0,1
+项目13=NW_REC_FILE_FILTER, 南网标准录波器过滤手动录波, BOOL,0, 0,1
+项目14=LIST_CALL_INTERVAL(M), 录波定时召唤间隔(分钟), WORD,30(0,65535), 0,1
+项目15=MODEL_CHECK_TYPE, 模型检测模式, ENUM,0(0:常规检测机制，严格，检测失败退出程序,1:宽松检测机制，检测失败，给出告警，程序继续运行,2:不检测，初始化时不检测，由应用自己决定检测时机), 0,1
+项目16=REC_OSC_FILE_READ_MODE, 故障过滤模式, ENUM,1(1:实时召唤,2:故障过滤模式召唤,3:被动模式召唤), 0,1
+[SNTP地址配置]
+关键字=SNTP_REMOTE_IP
+显示方式=2
+数目=2
+项目1=序号, 序号, BYTE,1(1,254), 0,1
+项目2=IP, 对端IP, STRING,192.168.1.199(1,24), 0,1

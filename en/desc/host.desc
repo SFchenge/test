@@ -1,0 +1,72 @@
+[base]
+code = ascii
+name = host
+doc version = V1.20
+tool = 1326 config tool
+tool version = V1.10bata
+last modified datetime = 2007-1-9 14:27
+
+[master cpu config]
+Key=TASK
+ShowMode=1
+Sum=6
+Item1=FTP, FTP enable, ENUM,1(0:off,1:on), 0,1
+Item2=DOC, DOC enable, ENUM,1(0:off,1:on), 0,1
+Item3=MMI, MMI enable, ENUM,1(0:off,1:on), 0,1
+Item4=ALT, ALT enable, ENUM,0(0:off,1:on), 0,1
+Item5=WF, WF enable, ENUM,0(0:off,1:on), 0,1
+Item6=FIA, FIA enable, ENUM,1(0:off,1:on), 0,1
+[MMI config]
+Key=MMI
+ShowMode=1
+Sum=2
+Item1=BACKLIGHT, BACKLIGHT enable, INT,5(5,65535), 0,1
+Item2=LANGUAGE, LANGUAGE select, ENUM,1(0:English,1:Chinese), 0,1
+[LIGHT Control]
+Key=LIGHT
+ShowMode=1
+Sum=5
+Item1=EVENTLIGHT, event light enable, ENUM,1(0:OFF,1:ON), 0,1
+Item2=ALARMLIGHT, alarm light enable, ENUM,1(0:OFF,1:ON), 0,1
+Item3=COMMLIGHT, communication light enable, ENUM,1(0:OFF,1:ON), 0,1
+Item4=MAINTAINLIGHT, maintenance light enable, ENUM,1(0:OFF,1:ON), 0,1
+Item5=GPSLIGHT, GSP lost light enable, ENUM,0(0:OFF,1:ON), 0,1
+[Information Control]
+Key=INF
+ShowMode=1
+Sum=4
+Item1=EVENTINF, Event enable, ENUM,0(0:OFF,1:ON), 0,1
+Item2=ALARMINF, Alarm enable, ENUM,0(0:OFF,1:ON), 0,1
+Item3=DIGINF, Digital enable, ENUM,0(0:OFF,1:ON), 0,1
+Item4=COMMINF, Link status enable, ENUM,1(0:OFF,1:ON), 0,1
+[OSC]
+Key=OSC
+ShowMode=1
+Sum=4
+Item1=DISK_SPARE_WARNING, Disk space warning level(percent value), REAL,15(0,100), 0,1
+Item2=DISK_SPARE_DEADZONE, Disk space dead zone(MBytes), BYTE,1(1,255), 0,1
+Item3=PROT_OSC_FILE_LIST_MAX, protection OSC file list max, INT,1000(1,2000), 0,1
+Item4=REC_OSC_FILE_LIST_MAX, recorder OSC file list max, INT,200(1,1000), 0,1
+[Event Report MMI Display]
+Key=REPORT
+ShowMode=1
+Sum=1
+Item1=REPORT_EN, REPORT enable, ENUM,0(0:OFF,1:ON), 0,1
+[OSC List MMI Display]
+Key=RECLIST
+ShowMode=1
+Sum=1
+Item1=RECLIST_EN, OSC List enable, ENUM,0(0:OFF,1:ON), 0,1
+[Hardware Version]
+Key=VERSION
+ShowMode=2
+Sum=4
+Item1=CPU, CPUºÅ, BYTE,1(1,255), 0,1
+Item2=TYPE, Card Type, STRING,(0,80), 0,1
+Item3=VESION, Hardware Version, STRING,(0,80), 0,1
+Item4=TIME, Manufacturing time, STRING,(0,80), 0,1
+[RTU Version]
+Key=RTUVERSION
+ShowMode=1
+Sum=1
+Item1=RTUVERSION, RTU Version, STRING,v3.01(0,80), 0,1

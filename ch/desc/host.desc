@@ -1,0 +1,75 @@
+[base]
+code = ascii
+name = host
+doc version = V1.20
+tool = 1326 config tool
+tool version = V1.10bata
+last modified datetime = 2007-1-9 14:27
+
+[主CPU配置信息]
+关键字=TASK
+显示方式=1
+数目=6
+项目1=FTP, FTP使能标记, ENUM,1(0:不,1:是), 0,1
+项目2=DOC, DOC使能标记, ENUM,1(0:不,1:是), 0,1
+项目3=MMI, MMI使能标记, ENUM,1(0:不,1:是), 0,1
+项目4=ALT, ALT使能标记, ENUM,0(0:不,1:是), 0,1
+项目5=WF, WF使能标记, ENUM,0(0:不,1:是), 0,1
+项目6=FIA, FIA使能标记, ENUM,1(0:不,1:是), 0,1
+[MMI基本配置]
+关键字=MMI
+显示方式=1
+数目=2
+项目1=BACKLIGHT, 液晶背光时间, INT,5(5,65535), 0,1
+项目2=LANGUAGE, LANGUAGE语言选择, ENUM,1(0:英文显示,1:中文显示), 0,1
+[指示灯控制]
+关键字=LIGHT
+显示方式=1
+数目=5
+项目1=EVENTLIGHT, 事故灯使能, ENUM,1(0:停用,1:启用), 0,1
+项目2=ALARMLIGHT, 告警灯使能, ENUM,1(0:停用,1:启用), 0,1
+项目3=COMMLIGHT, 通信灯使能, ENUM,1(0:停用,1:启用), 0,1
+项目4=MAINTAINLIGHT, 维护灯使能, ENUM,1(0:停用,1:启用), 0,1
+项目5=GPSLIGHT, GSP失步灯使能, ENUM,0(0:停用,1:启用), 0,1
+[信息显示控制]
+关键字=INF
+显示方式=1
+数目=4
+项目1=EVENTINF, 保护事件使能, ENUM,1(0:停用,1:启用), 0,1
+项目2=ALARMINF, 保护告警使能, ENUM,1(0:停用,1:启用), 0,1
+项目3=DIGINF, 遥信状态使能, ENUM,1(0:停用,1:启用), 0,1
+项目4=COMMINF, 通信状态使能, ENUM,1(0:停用,1:启用), 0,1
+
+[录波配置信息]
+关键字=OSC
+显示方式=1
+数目=6
+项目1=DISK_SPARE_WARNING, 磁盘空间容量告警线(剩余百分之几告警), REAL,15(0,100), 0,1
+项目2=DISK_SPARE_DEADZONE, 磁盘空间容量上送死区(兆), BYTE,1(1,255), 0,1
+项目3=PROT_OSC_FILE_LIST_MAX, 保护录波列表文件大小, INT,1000(1,2000), 0,1
+项目4=REC_OSC_FILE_LIST_MAX, 录波器录波列表文件大小, INT,200(1,1000), 0,1
+项目5=DISK_SPARE_ACCESSTIME, 磁盘空间扫描时间(分钟), INT,1440(1,65535), 0,1
+项目6=DISK_SPARE_DEL_ZONE, 磁盘空间容量达到告警线后删除带宽百分比, BYTE,10(0,100), 0,1
+[事故报告MMI显示]
+关键字=REPORT
+显示方式=1
+数目=1
+项目1=REPORT_EN, 事故报告显示使能, ENUM,0(0:停用,1:启用), 0,1
+[录波列表MMI显示]
+关键字=RECLIST
+显示方式=1
+数目=1
+项目1=RECLIST_EN, 录波列表显示使能, ENUM,0(0:停用,1:启用), 0,1
+[硬件版本配置]
+关键字=VERSION
+显示方式=2
+数目=4
+项目1=CPU, CPU号, BYTE,1(1,255), 0,1
+项目2=TYPE, 插件类型（背板印字）, STRING,(0,80), 0,1
+项目3=VESION, 硬件版本, STRING,(0,80), 0,1
+项目4=TIME, 制造时间, STRING,(0,80), 0,1
+[远动版本]
+关键字=RTUVERSION
+显示方式=1
+数目=1
+项目1=RTUVERSION, 远动版本号, STRING,v3.01(0,80), 0,1

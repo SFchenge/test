@@ -1,0 +1,35 @@
+[base]
+code = ascii
+name = 转出2000规约
+doc version = v1.10
+tool = 1326 config tool
+tool version = v1.10
+last modified datetime = 2007-1-9 14:27
+
+[装置信息]
+关键字=DEV
+显示方式=2
+数目=8
+项目1=DevID, 装置ID, BYTE,1(0,255), 0,1
+项目2=CpuIDSrc, 来自接入插件号, BYTE,1(0,255), 0,1
+项目3=PtoIDSrc, 来自接入规约号, BYTE,1(0,255), 0,1
+项目4=DevIDSrc, 来自接入装置号, BYTE,1(0,255), 0,1
+项目5=模板名, 模板名, STRING,CSC101A(0,50), 0,1
+项目6=LinkAddr, 链路地址(H), WORD_HEX,1(0,32767), 0,1
+项目7=SetType, 定值报文类型, ENUM,0(0:管理机方式3380,1:保护方式331A), 0,1
+项目8=装置描述, 装置的具体描述信息, STRING,0(0,50), 0,1
+[公共信息]
+关键字=COMMON
+显示方式=1
+数目=4
+项目1=DEBUG, 调试状态, ENUM,0(0:不启用,1:启用), 0,1
+项目2=SET_CLOCK, 是否需要对时, ENUM,0(0:不,1:是), 0,1
+项目3=PREPARE_TIME, 数据准备时间（秒）, WORD,90(0,65535), 0,1
+项目4=LOCK_DIG_ID, 遥控闭锁遥信点ID(五字节内部ID), STRING,0H(0,500), 255,1
+[规约信息]
+关键字=s2000
+显示方式=1
+数目=3
+项目1=DEV_SEND_CYCLE, 数据发送间隔（秒）, INT,10(3,32767), 0,1
+项目2=DEV_MODULE_VERSION, 模板版本号, BYTE,0(0,255), 0,1
+项目3=ENABLE_OSC_FTP_MODE, 允许录波以FTP方式传递, ENUM,0(0:禁止使用FTP方式,1:允许使用FTP方式), 0,1

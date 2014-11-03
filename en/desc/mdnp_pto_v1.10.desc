@@ -1,0 +1,40 @@
+[base]
+code = ascii
+name = DNP30接入规约
+doc version = v1.10
+tool = 1326 config tool
+tool version = v1.10
+last modified datetime = 2007-1-9 14:27
+
+[Dev information]
+Key=ADDRESS
+ShowMode=2
+Sum=3
+Item1=内部规约地址, Protocol address, BYTE,1(0,255), 0,0
+Item2=DNP规约装置地址, DNP dev address(H), WORD,0(0,65535), 0,1
+Item3=装置模板名称, Dev template name, STRING,0(0,50), 0,0
+[Common]
+Key=COMMON
+ShowMode=1
+Sum=7
+Item1=DEBUG, Debug, ENUM,0(0:Unable,1:Enable), 0,1
+Item2=SET_CLOCK, Set clock, ENUM,0(0:No,1:Yes), 0,1
+Item3=DATA_SYNC(M), Data sync(M), WORD,10(0,65535), 0,1
+Item4=SYN_OFFSET, SYN_OFFSET, WORD,2(0,65535), 0,1
+Item5=FAULT_ENABLE, Fault enable, ENUM,0(0:No,1:Yes), 0,1
+Item6=OSC_FILE_LIST_NUM, OSC file list num, WORD,30(0,65535), 0,1
+Item7=OSC_FILE_CALL_OVERTIME(M), OSC file call overtime(M), WORD,10(0,65535), 0,1
+[Protocol information]
+Key=mdnp
+ShowMode=1
+Sum=10
+Item1=DEV_TYPE, Dev type, BYTE,9(0,255), 0,1
+Item2=FRAME_INTERVAL(MS), Frame interval(ms), WORD,1000(0,65535), 0,1
+Item3=FRAME_OVERTIME(MS), Frame overtime(ms), WORD,2000(0,65535), 0,1
+Item4=GI_INTERVAL(M), GI interval(M), WORD,30(0,100), 0,1
+Item5=ANA_INTERVAL(M), Ana interval(M), WORD,10(0,100), 0,1
+Item6=DIG_INTERVAL(M), Dig interval(M), WORD,15(0,100), 0,1
+Item7=TIME_ZONE, Time zone, BYTE,0(0,255), 0,1
+Item8=PRIMARY_ADDR, Primary address, WORD,1(0,65535), 0,1
+Item9=BASE_YEAR, Base year, WORD,1970(0,65535), 0,1
+Item10=ASSIGN_CLASS, Assign class, BOOL,0, 0,1
